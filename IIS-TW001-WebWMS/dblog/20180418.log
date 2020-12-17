@@ -1,0 +1,12 @@
+
+ProcedureBase执行报错时间：2018/4/18 下午 03:22:01
+ProcedureBase Name：Proc_Change_InAsn
+ProcedureBase执行报错Message：在将 nvarchar 值 '只有[未处理]的状态才可以审核' 转换成数据类型 int 时失败。
+
+ProcedureBase执行报错时间：2018/4/18 下午 03:22:47
+ProcedureBase Name：Proc_Change_InAsn
+ProcedureBase执行报错Message：在将 nvarchar 值 '只有[未处理]的状态才可以审核' 转换成数据类型 int 时失败。
+
+ProcedureBase执行报错时间：2018/4/18 下午 03:22:58
+ProcedureBase Name：Proc_Change_InAsn
+ProcedureBase执行报错Message：在将 nvarchar 值 '只有[未处理]的状态才可以审核' 转换成数据类型 int 时失败。

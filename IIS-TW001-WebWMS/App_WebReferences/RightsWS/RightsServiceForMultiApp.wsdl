@@ -1,0 +1,1497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="UpdateStyle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="extend1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="extend2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateStyleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateStyleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="oldPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangePasswordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNavigatorMenuByApp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNavigatorMenuByAppResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNavigatorMenuByAppResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTopLevelMenu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="parentID" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="powerList" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTopLevelMenuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTopLevelMenuResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNavigatorMenu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="parentID" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNavigatorMenuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNavigatorMenuResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsLoginedToSSO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsLoginedToSSOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsLoginedToSSOResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFunctions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="modelNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isAuthorized" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFunctionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFunctionsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetModule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetModuleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetModuleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAppListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAppListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginToApp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginToAppResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginToAppResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserFunList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserFunListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserFunListResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserListByRole">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="roleNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserListByRoleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserListByRoleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOtherUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="otherUserNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOtherUserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOtherUserInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoleList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRoleListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRoleListResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBeProxyUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBeProxyUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBeProxyUsersResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBeProxyRoles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBeProxyRolesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBeProxyRolesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBeProxyFuncs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBeProxyFuncsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBeProxyFuncsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChildDeptList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChildDeptListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChildDeptListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserListByRole_Old">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="roleNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserListByRole_OldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserListByRole_OldResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeptInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeptInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDeptInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserListByDept">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deptNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserListByDeptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserListByDeptResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPowerMenuByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="needProxyMenu" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPowerMenuByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPowerMenuByUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPowerSubFunByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="needProxySubFun" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPowerSubFunByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPowerSubFunByUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetABooksByAppNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetABooksByAppNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetABooksByAppNoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDataAuthScript">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="functionNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDataAuthScriptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserDataAuthScriptResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDataAuthLists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="functionNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDataAuthListsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserDataAuthListsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDataAuthListsByHierNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="functionNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hierNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserDataAuthListsByHierNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserDataAuthListsByHierNoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPFunNoByMenu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MenuId" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPFunNoByMenuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPFunNoByMenuResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateStyleSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateStyle" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStyleSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateStyleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNavigatorMenuByAppSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNavigatorMenuByApp" />
+  </wsdl:message>
+  <wsdl:message name="GetNavigatorMenuByAppSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNavigatorMenuByAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTopLevelMenuSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTopLevelMenu" />
+  </wsdl:message>
+  <wsdl:message name="GetTopLevelMenuSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTopLevelMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNavigatorMenuSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNavigatorMenu" />
+  </wsdl:message>
+  <wsdl:message name="GetNavigatorMenuSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNavigatorMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsLoginedToSSOSoapIn">
+    <wsdl:part name="parameters" element="tns:IsLoginedToSSO" />
+  </wsdl:message>
+  <wsdl:message name="IsLoginedToSSOSoapOut">
+    <wsdl:part name="parameters" element="tns:IsLoginedToSSOResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFunctionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFunctions" />
+  </wsdl:message>
+  <wsdl:message name="GetFunctionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFunctionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetModuleSoapIn">
+    <wsdl:part name="parameters" element="tns:GetModule" />
+  </wsdl:message>
+  <wsdl:message name="GetModuleSoapOut">
+    <wsdl:part name="parameters" element="tns:GetModuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAppListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAppList" />
+  </wsdl:message>
+  <wsdl:message name="GetAppListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAppListResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginToAppSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginToApp" />
+  </wsdl:message>
+  <wsdl:message name="LoginToAppSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginToAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserFunListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserFunList" />
+  </wsdl:message>
+  <wsdl:message name="GetUserFunListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserFunListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserListByRoleSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserListByRole" />
+  </wsdl:message>
+  <wsdl:message name="GetUserListByRoleSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserListByRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOtherUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOtherUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetOtherUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOtherUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRoleListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRoleList" />
+  </wsdl:message>
+  <wsdl:message name="GetRoleListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRoleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBeProxyUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBeProxyUsers" />
+  </wsdl:message>
+  <wsdl:message name="GetBeProxyUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBeProxyUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBeProxyRolesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBeProxyRoles" />
+  </wsdl:message>
+  <wsdl:message name="GetBeProxyRolesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBeProxyRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBeProxyFuncsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBeProxyFuncs" />
+  </wsdl:message>
+  <wsdl:message name="GetBeProxyFuncsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBeProxyFuncsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChildDeptListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChildDeptList" />
+  </wsdl:message>
+  <wsdl:message name="GetChildDeptListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChildDeptListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserListByRole_OldSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserListByRole_Old" />
+  </wsdl:message>
+  <wsdl:message name="GetUserListByRole_OldSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserListByRole_OldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDeptInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDeptInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDeptInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDeptInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserList" />
+  </wsdl:message>
+  <wsdl:message name="GetUserListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserListByDeptSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserListByDept" />
+  </wsdl:message>
+  <wsdl:message name="GetUserListByDeptSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserListByDeptResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPowerMenuByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPowerMenuByUser" />
+  </wsdl:message>
+  <wsdl:message name="GetPowerMenuByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPowerMenuByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPowerSubFunByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPowerSubFunByUser" />
+  </wsdl:message>
+  <wsdl:message name="GetPowerSubFunByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPowerSubFunByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetABooksByAppNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetABooksByAppNo" />
+  </wsdl:message>
+  <wsdl:message name="GetABooksByAppNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetABooksByAppNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDataAuthScriptSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserDataAuthScript" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDataAuthScriptSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserDataAuthScriptResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDataAuthListsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserDataAuthLists" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDataAuthListsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserDataAuthListsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDataAuthListsByHierNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserDataAuthListsByHierNo" />
+  </wsdl:message>
+  <wsdl:message name="GetUserDataAuthListsByHierNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserDataAuthListsByHierNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPFunNoByMenuSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPFunNoByMenu" />
+  </wsdl:message>
+  <wsdl:message name="GetPFunNoByMenuSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPFunNoByMenuResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RightsServiceForMultiAppSoap">
+    <wsdl:operation name="UpdateStyle">
+      <wsdl:input message="tns:UpdateStyleSoapIn" />
+      <wsdl:output message="tns:UpdateStyleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordSoapIn" />
+      <wsdl:output message="tns:ChangePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNavigatorMenuByApp">
+      <wsdl:input message="tns:GetNavigatorMenuByAppSoapIn" />
+      <wsdl:output message="tns:GetNavigatorMenuByAppSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopLevelMenu">
+      <wsdl:input message="tns:GetTopLevelMenuSoapIn" />
+      <wsdl:output message="tns:GetTopLevelMenuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNavigatorMenu">
+      <wsdl:input message="tns:GetNavigatorMenuSoapIn" />
+      <wsdl:output message="tns:GetNavigatorMenuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsLoginedToSSO">
+      <wsdl:input message="tns:IsLoginedToSSOSoapIn" />
+      <wsdl:output message="tns:IsLoginedToSSOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctions">
+      <wsdl:input message="tns:GetFunctionsSoapIn" />
+      <wsdl:output message="tns:GetFunctionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModule">
+      <wsdl:input message="tns:GetModuleSoapIn" />
+      <wsdl:output message="tns:GetModuleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppList">
+      <wsdl:input message="tns:GetAppListSoapIn" />
+      <wsdl:output message="tns:GetAppListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginToApp">
+      <wsdl:input message="tns:LoginToAppSoapIn" />
+      <wsdl:output message="tns:LoginToAppSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFunList">
+      <wsdl:input message="tns:GetUserFunListSoapIn" />
+      <wsdl:output message="tns:GetUserFunListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserListByRole">
+      <wsdl:input message="tns:GetUserListByRoleSoapIn" />
+      <wsdl:output message="tns:GetUserListByRoleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherUserInfo">
+      <wsdl:input message="tns:GetOtherUserInfoSoapIn" />
+      <wsdl:output message="tns:GetOtherUserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleList">
+      <wsdl:input message="tns:GetRoleListSoapIn" />
+      <wsdl:output message="tns:GetRoleListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBeProxyUsers">
+      <wsdl:input message="tns:GetBeProxyUsersSoapIn" />
+      <wsdl:output message="tns:GetBeProxyUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBeProxyRoles">
+      <wsdl:input message="tns:GetBeProxyRolesSoapIn" />
+      <wsdl:output message="tns:GetBeProxyRolesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBeProxyFuncs">
+      <wsdl:input message="tns:GetBeProxyFuncsSoapIn" />
+      <wsdl:output message="tns:GetBeProxyFuncsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChildDeptList">
+      <wsdl:input message="tns:GetChildDeptListSoapIn" />
+      <wsdl:output message="tns:GetChildDeptListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserListByRole_Old">
+      <wsdl:input message="tns:GetUserListByRole_OldSoapIn" />
+      <wsdl:output message="tns:GetUserListByRole_OldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptInfo">
+      <wsdl:input message="tns:GetDeptInfoSoapIn" />
+      <wsdl:output message="tns:GetDeptInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:input message="tns:GetUserInfoSoapIn" />
+      <wsdl:output message="tns:GetUserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserList">
+      <wsdl:input message="tns:GetUserListSoapIn" />
+      <wsdl:output message="tns:GetUserListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserListByDept">
+      <wsdl:input message="tns:GetUserListByDeptSoapIn" />
+      <wsdl:output message="tns:GetUserListByDeptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPowerMenuByUser">
+      <wsdl:input message="tns:GetPowerMenuByUserSoapIn" />
+      <wsdl:output message="tns:GetPowerMenuByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPowerSubFunByUser">
+      <wsdl:input message="tns:GetPowerSubFunByUserSoapIn" />
+      <wsdl:output message="tns:GetPowerSubFunByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetABooksByAppNo">
+      <wsdl:input message="tns:GetABooksByAppNoSoapIn" />
+      <wsdl:output message="tns:GetABooksByAppNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDataAuthScript">
+      <wsdl:input message="tns:GetUserDataAuthScriptSoapIn" />
+      <wsdl:output message="tns:GetUserDataAuthScriptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDataAuthLists">
+      <wsdl:input message="tns:GetUserDataAuthListsSoapIn" />
+      <wsdl:output message="tns:GetUserDataAuthListsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDataAuthListsByHierNo">
+      <wsdl:input message="tns:GetUserDataAuthListsByHierNoSoapIn" />
+      <wsdl:output message="tns:GetUserDataAuthListsByHierNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPFunNoByMenu">
+      <wsdl:input message="tns:GetPFunNoByMenuSoapIn" />
+      <wsdl:output message="tns:GetPFunNoByMenuSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RightsServiceForMultiAppSoap" type="tns:RightsServiceForMultiAppSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateStyle">
+      <soap:operation soapAction="http://tempuri.org/UpdateStyle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://tempuri.org/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNavigatorMenuByApp">
+      <soap:operation soapAction="http://tempuri.org/GetNavigatorMenuByApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopLevelMenu">
+      <soap:operation soapAction="http://tempuri.org/GetTopLevelMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNavigatorMenu">
+      <soap:operation soapAction="http://tempuri.org/GetNavigatorMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsLoginedToSSO">
+      <soap:operation soapAction="http://tempuri.org/IsLoginedToSSO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctions">
+      <soap:operation soapAction="http://tempuri.org/GetFunctions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModule">
+      <soap:operation soapAction="http://tempuri.org/GetModule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppList">
+      <soap:operation soapAction="http://tempuri.org/GetAppList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginToApp">
+      <soap:operation soapAction="http://tempuri.org/LoginToApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFunList">
+      <soap:operation soapAction="http://tempuri.org/GetUserFunList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserListByRole">
+      <soap:operation soapAction="http://tempuri.org/GetUserListByRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherUserInfo">
+      <soap:operation soapAction="http://tempuri.org/GetOtherUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleList">
+      <soap:operation soapAction="http://tempuri.org/GetRoleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBeProxyUsers">
+      <soap:operation soapAction="http://tempuri.org/GetBeProxyUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBeProxyRoles">
+      <soap:operation soapAction="http://tempuri.org/GetBeProxyRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBeProxyFuncs">
+      <soap:operation soapAction="http://tempuri.org/GetBeProxyFuncs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChildDeptList">
+      <soap:operation soapAction="http://tempuri.org/GetChildDeptList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserListByRole_Old">
+      <soap:operation soapAction="http://tempuri.org/GetUserListByRole_Old" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptInfo">
+      <soap:operation soapAction="http://tempuri.org/GetDeptInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <soap:operation soapAction="http://tempuri.org/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserList">
+      <soap:operation soapAction="http://tempuri.org/GetUserList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserListByDept">
+      <soap:operation soapAction="http://tempuri.org/GetUserListByDept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPowerMenuByUser">
+      <soap:operation soapAction="http://tempuri.org/GetPowerMenuByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPowerSubFunByUser">
+      <soap:operation soapAction="http://tempuri.org/GetPowerSubFunByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetABooksByAppNo">
+      <soap:operation soapAction="http://tempuri.org/GetABooksByAppNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDataAuthScript">
+      <soap:operation soapAction="http://tempuri.org/GetUserDataAuthScript" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDataAuthLists">
+      <soap:operation soapAction="http://tempuri.org/GetUserDataAuthLists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDataAuthListsByHierNo">
+      <soap:operation soapAction="http://tempuri.org/GetUserDataAuthListsByHierNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPFunNoByMenu">
+      <soap:operation soapAction="http://tempuri.org/GetPFunNoByMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RightsServiceForMultiAppSoap12" type="tns:RightsServiceForMultiAppSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateStyle">
+      <soap12:operation soapAction="http://tempuri.org/UpdateStyle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap12:operation soapAction="http://tempuri.org/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNavigatorMenuByApp">
+      <soap12:operation soapAction="http://tempuri.org/GetNavigatorMenuByApp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopLevelMenu">
+      <soap12:operation soapAction="http://tempuri.org/GetTopLevelMenu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNavigatorMenu">
+      <soap12:operation soapAction="http://tempuri.org/GetNavigatorMenu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsLoginedToSSO">
+      <soap12:operation soapAction="http://tempuri.org/IsLoginedToSSO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctions">
+      <soap12:operation soapAction="http://tempuri.org/GetFunctions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModule">
+      <soap12:operation soapAction="http://tempuri.org/GetModule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAppList">
+      <soap12:operation soapAction="http://tempuri.org/GetAppList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginToApp">
+      <soap12:operation soapAction="http://tempuri.org/LoginToApp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFunList">
+      <soap12:operation soapAction="http://tempuri.org/GetUserFunList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserListByRole">
+      <soap12:operation soapAction="http://tempuri.org/GetUserListByRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetOtherUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleList">
+      <soap12:operation soapAction="http://tempuri.org/GetRoleList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBeProxyUsers">
+      <soap12:operation soapAction="http://tempuri.org/GetBeProxyUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBeProxyRoles">
+      <soap12:operation soapAction="http://tempuri.org/GetBeProxyRoles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBeProxyFuncs">
+      <soap12:operation soapAction="http://tempuri.org/GetBeProxyFuncs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChildDeptList">
+      <soap12:operation soapAction="http://tempuri.org/GetChildDeptList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserListByRole_Old">
+      <soap12:operation soapAction="http://tempuri.org/GetUserListByRole_Old" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeptInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetDeptInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserList">
+      <soap12:operation soapAction="http://tempuri.org/GetUserList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserListByDept">
+      <soap12:operation soapAction="http://tempuri.org/GetUserListByDept" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPowerMenuByUser">
+      <soap12:operation soapAction="http://tempuri.org/GetPowerMenuByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPowerSubFunByUser">
+      <soap12:operation soapAction="http://tempuri.org/GetPowerSubFunByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetABooksByAppNo">
+      <soap12:operation soapAction="http://tempuri.org/GetABooksByAppNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDataAuthScript">
+      <soap12:operation soapAction="http://tempuri.org/GetUserDataAuthScript" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDataAuthLists">
+      <soap12:operation soapAction="http://tempuri.org/GetUserDataAuthLists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDataAuthListsByHierNo">
+      <soap12:operation soapAction="http://tempuri.org/GetUserDataAuthListsByHierNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPFunNoByMenu">
+      <soap12:operation soapAction="http://tempuri.org/GetPFunNoByMenu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RightsServiceForMultiApp">
+    <wsdl:port name="RightsServiceForMultiAppSoap" binding="tns:RightsServiceForMultiAppSoap">
+      <soap:address location="http://192.168.88.115:8888/RightsWeb/RightsServiceForMultiApp.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RightsServiceForMultiAppSoap12" binding="tns:RightsServiceForMultiAppSoap12">
+      <soap12:address location="http://192.168.88.115:8888/RightsWeb/RightsServiceForMultiApp.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

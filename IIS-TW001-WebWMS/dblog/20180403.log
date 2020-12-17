@@ -1,0 +1,13 @@
+ProcedureBase执行报错时间：2018/4/3 上午 09:45:29
+ProcedureBase执行报错Message：EXECUTE 后的事务计数指示 BEGIN 和 COMMIT 语句的数目不匹配。上一计数 = 0，当前计数 = 1。
+Class: DreamTek.ASRS.DAL.INASN, Property: cticketcode, Error: cticketcode 字段是必需的。
+Class: DreamTek.ASRS.DAL.INASN, Property: cstatus, Error: cstatus 字段是必需的。
+ProcedureBase执行报错时间：2018/4/3 上午 10:12:41
+ProcedureBase Name：proc_save_inchangeByAsn
+ProcedureBase执行报错Message：在将 varchar 值 '保存失败！[' 转换成数据类型 int 时失败。
+ProcedureBase执行报错时间：2018/4/3 上午 10:18:15
+ProcedureBase Name：proc_save_inchangeByAsn
+ProcedureBase执行报错Message：在将 varchar 值 '保存失败！[' 转换成数据类型 int 时失败。
+ProcedureBase执行报错时间：2018/4/3 上午 10:18:44
+ProcedureBase Name：proc_save_inchangeByAsn
+ProcedureBase执行报错Message：在将 varchar 值 '保存失败！[' 转换成数据类型 int 时失败。

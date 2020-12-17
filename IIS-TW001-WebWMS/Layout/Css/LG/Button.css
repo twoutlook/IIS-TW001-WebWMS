@@ -1,0 +1,73 @@
+﻿/*
+圆角按钮
+*/
+.button
+{
+ border-collapse:collapse;
+	display: inline-block;
+	zoom:1;
+	background: url("images/DCIS-no-repeat.png") no-repeat scroll left center transparent;
+	background-position:-1013px -1px ;
+    font-size: 12px;
+    height: 26px;
+    padding: 0 0 0 6px;
+    margin:0 0 0 0;
+    position: relative;
+}
+.button
+{
+	*display: inline;
+}
+.buttonCenter
+{
+	background: url("images/DCIS-no-repeat.png") repeat-x scroll 0 0 transparent;
+	background-position:-602px -1px ;
+	border: 0 none;
+	color: #3580C9;
+	font-weight:bold;
+	cursor: pointer;
+	float: left;
+	font-family: "微软雅黑";
+	height: 26px;
+	line-height: 26px;	
+	padding:0px  0px  0px 0px;
+}
+.buttonRight{
+	background: url("images/DCIS-no-repeat.png") no-repeat scroll right center transparent;
+	background-position:-990px -1px ;
+    float: left;
+    height: 26px;
+    width: 6px;
+}
+
+.buttonDisable
+{
+	display: inline-block;	
+	background: url("DCIS-no-repeat.png") no-repeat scroll left center transparent;
+	background-position:-1013px -59px ;
+    font-size: 12px;
+    height: 26px;
+    padding: 0 0 0 6px;
+    margin:0 0 0 0;
+}
+.buttonCenterDisable
+{
+	background: url("DCIS-no-repeat.png") repeat-x scroll 0 0 transparent;
+	background-position:-602px -59px ;
+	border: 0 none;
+	color: #a9a7a7;
+	font-weight:bold;
+	cursor: pointer;
+	float: left;
+	font-family: "微软雅黑";
+	height: 26px;
+	line-height: 26px;	
+}
+.buttonRightDisable
+{
+	background: url("DCIS-no-repeat.png") no-repeat scroll right center transparent;
+	background-position:-990px -59px ;
+    float: left;
+    height: 26px;
+    width: 6px;
+}

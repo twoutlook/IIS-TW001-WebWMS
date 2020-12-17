@@ -1,0 +1,10 @@
+Class: DreamTek.ASRS.DAL.INASN, Property: cticketcode, Error: cticketcode 字段是必需的。
+Class: DreamTek.ASRS.DAL.INASN, Property: cstatus, Error: cstatus 字段是必需的。
+
+ProcedureBase执行报错时间：2018/4/12 下午 01:28:55
+ProcedureBase Name：Proc_Change_InAsn
+ProcedureBase执行报错Message：从数据类型 nvarchar 转换为 float 时出错。
+
+ProcedureBase执行报错时间：2018/4/12 下午 01:30:56
+ProcedureBase Name：Proc_Change_InAsn
+ProcedureBase执行报错Message：从数据类型 nvarchar 转换为 float 时出错。

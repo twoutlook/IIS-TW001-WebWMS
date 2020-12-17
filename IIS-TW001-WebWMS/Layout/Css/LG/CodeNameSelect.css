@@ -1,0 +1,60 @@
+﻿.CodeNameSelect
+{	
+ /*border:1px solid #E5E5E5; */
+ /*display:inline-block;*/
+ zoom:1; 
+ 
+}
+.CodeNameSelect
+{
+	*display:inline;
+}
+.CodeNameSelect DIV
+{
+	vertical-align:middle;
+}
+.CodeNameSelect INPUT
+{
+ /*border:1px solid #E5E5E5;	
+ background:#FFFFFF;
+ height:20px;*/
+ float:left;
+ position:relative;
+}
+.CodeNameSelect .elementContainer
+{
+	display:inline-block;
+	zoom:1;
+	position: relative;
+	white-space:nowrap;
+}
+.CodeNameSelect .elementContainer
+{
+	*display:inline;
+}
+.CodeNameSelect .btnSelect
+{
+  /**/display:inline-block;
+   zoom:1;
+  background: url("Images/DCIS-no-repeat.png") no-repeat;
+  background-repeat:no-repeat;
+  background-position: -1px -1px;
+  height:16px;
+  width:16px;  
+  cursor:pointer;  
+  margin-top:1px;
+  margin-left:-17px;
+  position:absolute;
+}
+.CodeNameSelect .btnSelect
+{
+	*display:inline; 
+}
+.CodeNameSelect .btnSelect:hover
+{
+  background-image:url("Images/DCIS-no-repeat.png") no-reapet;
+  background-repeat:no-repeat;
+  background-position: -31px -1px;
+  height:16px;
+  width:16px;
+}

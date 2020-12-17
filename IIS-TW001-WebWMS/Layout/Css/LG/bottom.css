@@ -1,0 +1,12 @@
+﻿* {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #ededed;
+}
+.copyright 
+{
+	background-image:url(images/bottom/in_bottom_bg.gif);
+	font-family: arial; color: #459adc; font-size: 10px; font-weight: bold
+}

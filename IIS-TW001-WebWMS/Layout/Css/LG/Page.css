@@ -1,0 +1,1468 @@
+﻿@import url("Button.css");
+@import url("CodeNameSelect.css");
+@import url("dialog.css");
+html
+{
+	overflow-y: scroll;
+}
+
+*
+{
+	font-family: "宋体";
+	font-size: 9pt;
+}
+
+A
+{
+	color: #666666;
+	font-family: "宋体";
+}
+A.hot
+{
+	color: #ff6600;
+	font-family: "宋体";
+	font-size: 14px;
+}
+A:link
+{
+	font-family: "宋体";
+	text-decoration: none;
+}
+A:visited
+{
+	font-family: "宋体";
+	text-decoration: none;
+}
+A:active
+{
+	color: #ff0000;
+	font-family: "宋体";
+	text-decoration: none;
+}
+A:hover
+{
+	color: #ff0000;
+	font-family: "宋体";
+	text-decoration: none;
+}
+BODY
+{
+	background-color: #f6f6f6;
+	margin: 0;
+}
+TABLE
+{
+	font-size: 9pt;
+	word-break: break-all;
+	font-family: "宋体";
+	color: #5d5c5c;
+}
+TABLE.info
+{
+	font-size: 9pt;
+	word-break: break-all;
+	font-family: "宋体";
+	color: #5d5c5c;
+	border-right: #cacaca 1px solid;
+	border-top: #cacaca 1px solid;
+	border-left: #cacaca 1px solid;
+	border-bottom: #cacaca 1px solid;
+	background-color: #f8fcff;
+	border-color: #cacaca;
+	border-collapse: collapse;
+}
+FONT
+{
+	font-size: 9pt;
+	font-family: "宋体";
+	color: #999999;
+}
+.in_user
+{
+	font-size: 9pt;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #d80546;
+	font-weight: bold;
+}
+.in_time
+{
+	font-size: 7pt;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333333;
+}
+
+INPUT.Noborder
+{
+	font-family: "宋体";
+	padding-top: 4px;
+	border-right: 0px solid;
+	border-top: 0px;
+	border-left: 0px;
+	border-bottom: 0px;
+	height: 18px;
+	background-color: #f8fcff;
+	font-size: 9pt;
+	width: 95%;
+}
+INPUT.Disable
+{
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #0b5195;
+	font-weight: bold;
+	padding-top: 4px;
+	border-right: 0px solid;
+	border-top: 0px;
+	border-left: 0px;
+	border-bottom: 0px;
+	height: 18px;
+	background-color: #ededed;
+}
+
+TEXTAREA
+{
+	border-right: #0048a6 1px dotted;
+	border-top: #0048a6 1px dotted;
+	font-size: 11px;
+	border-left: #0048a6 1px dotted;
+	color: #0048a6;
+	border-bottom: #0048a6 1px dotted;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #f8fcff;
+}
+
+.photo_title
+{
+	color: #3580c9;
+	font-size: 14px;
+	font-family: arial;
+	font-weight: bold;
+	line-height: 120%;
+}
+
+#slidingBlock
+{
+	width: 100%;
+	border: 0px #ececec solid;
+	padding: 0px;
+	overflow: hidden;
+}
+#slidingBlock h4
+{
+	float: left;
+	width: 82px;
+	height: 30px;
+	line-height: 25px;
+	text-align: center;
+	font-size: 12px;
+	overflow: hidden;
+}
+#slidingBlock h4.menuNo
+{
+	font-weight: normal;
+	color: #5298cd;
+	background: url(Images/slidingMenuLine.gif) repeat-x;
+}
+#slidingBlock h4.menuOn
+{
+	font-weight: bold;
+	color: #ffffff;
+	background: url(Images/slidingMenu.gif) no-repeat;
+}
+#slidingBlock DIV.slidingList_none
+{
+	display: none;
+}
+#slidingBlock DIV.slidingList
+{
+	margin: 0px;
+	padding: 0px;
+}
+#slidingBlock DIV.slidingList ul
+{
+	margin: 0px;
+	padding: 0px;
+}
+#slidingBlock DIV.slidingList li
+{
+	height: 20px;
+	line-height: 20px;
+}
+.leftmenu2
+{
+	padding-left: 15px;
+	height: 21px;
+	text-align: left;
+}
+/*clzhu从沈斌除提取覆盖原有*padding-left: 3px;*/
+.tablestyletd
+{
+	border-color: #b7e5ff;
+	border-style: solid;
+	border-width: 1px;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+
+.Button
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+}
+
+.ButtonAdd
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_add.gif);
+	width: 62px;
+	cursor:pointer;
+}
+
+.ButtonAdd4
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_add_4.gif);
+	width: 95px;
+}
+
+.ButtonAdd6
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_add_6.gif);
+	width: 141px;
+}
+
+/*检索按*/
+.ButtonSearch
+{
+	border-style: none;
+	border-color: inherit;
+	border-width: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: hand;
+	padding-left: 22px;
+	padding-top: 2px;
+	height:24px;
+	width: 62px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	color: #3580c9;
+	background-image: url('Images/in_s_bg_search.gif');
+	}
+
+.ButtonBack
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_back.gif);
+	width: 62px;
+}
+.ButtonNext
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_next.GIF);
+	width: 62px;
+}
+.ButtonPrev
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_prev.GIF);
+	width: 62px;
+}
+.ButtonCancel
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_cancel.gif);
+	width: 62px;
+}
+.ButtonClose
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_close.gif);
+	width: 62px;
+}
+
+.ButtonConfig
+{
+	border-style: none;
+	border-color: inherit;
+	border-width: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: hand;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	color: #3580c9;
+	background-image: url('Images/in_s_bg_config.gif');
+	width: 90px;
+    height:24px;
+}
+
+.ButtonConfig5
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_config_5.gif);
+	width: 108px;
+}
+
+.ButtonConfig9
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_config_9.gif);
+	width: 160px;
+}
+
+.ButtonDel
+{
+	border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    font-size: 12px;
+	font-weight: bold;
+	cursor: hand;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	color: #3580c9;
+	background-image: url('Images/in_s_bg_del.gif');
+	height: 24px;
+	width: 62px;
+	cursor:pointer;
+}
+
+.ButtonDel5
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_del_5.gif);
+	width: 108px;
+}
+
+.ButtonDo
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_do.gif);
+	width: 62px;
+}
+.ButtonExcel
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_excel.gif);
+	width: 62px;
+}
+.ButtonExchange
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_exchange.gif);
+	width: 118px;
+}
+.ButtonFx
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_fx.gif);
+	width: 90px;
+}
+
+.ButtonModify
+{
+	border-style: none;
+	border-color: inherit;
+	border-width: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: hand;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	color: #3580c9;
+	background-image: url('Images/in_s_bg_modify.gif');
+	}
+
+/*�打印按钮*/
+.ButtonPrint
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_print.gif);
+	width: 62px;
+}
+
+/*申请按钮*/
+.ButtonReg
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_reg.gif);
+	width: 62px;
+}
+
+.ButtonReg4
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_reg_4.gif);
+	width: 95px;
+}
+/*重置*/
+.ButtonReuser
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_reuser.gif);
+	width: 118px;
+}
+
+.ButtonSave
+{
+	border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    font-size: 12px;
+	font-weight: bold;
+	cursor: hand;
+	padding-left: 22px;
+	padding-top: 2px;
+	width: 62px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	color: #3580c9;
+	background-image: url('Images/in_s_bg_save.gif');
+    height: 23px;
+}
+
+.ButtonSave4
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_save_4.gif);
+	width: 95px;
+}
+
+/*检索按*/
+.ButtonSearch
+{
+	border-style: none;
+	border-color: inherit;
+	border-width: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: hand;
+	padding-left: 22px;
+	padding-top: 2px;
+	height:24px;
+	width: 62px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	color: #3580c9;
+	background-image: url('Images/in_s_bg_search.gif');
+	}
+
+/*邮件配置*/
+.ButtonSmtp
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_smtp.gif);
+	width: 95px;
+}
+
+/*保存*/
+.ButtonSure
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_sure.gif);
+	width: 62px;
+}
+
+/*同步按钮*/
+.ButtonTB
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_tb.gif);
+	width: 118px;
+}
+
+.ButtonMerge
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_add_4.gif);
+	width: 95px;
+	cursor:pointer;
+}
+.ButtonRef
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_tb.gif);
+	width: 62px;
+}
+.ButtonYY
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_yy.gif);
+	width: 90px;
+}
+
+/*隐藏浮动Frame*/
+.HideIframe
+{
+	z-index: 1;
+	filter: progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=10);
+	visibility: hidden;
+	position: absolute;
+	right: 94px;
+}
+
+/*弹出遮罩层的样式*/
+.DivShow
+{
+	border: none 0px white;
+	background: #f6f6f6;
+	padding: 0px;
+	width: expression(parentElement.scrollWidth - 2);
+	height: expression(offsetParent.offsetHeight - 2);
+	z-index: 1001;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+}
+
+/*导出Excel按钮样式*/
+.ExportButton
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 11px;
+	background-image: url(Images/excelForNavigator.gif);
+	background-color:Transparent;
+	border-left: 0px;
+	width: 38px;
+	cursor: hand;
+	border-bottom: 0px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 23px;
+	color: #3580c9;
+}
+
+.ButtonInfo
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_bc.gif);
+	width: 90px;
+}
+/*Add By CK 2009-10-13*/
+/*顶部的tr*/
+.topTr
+{
+	height: 15px;
+}
+
+/*顶部左侧的td*/
+.topLeftTd
+{
+	width: 8px;
+	height: 7px;
+	background-image: url(images/in_info_table_01.gif);
+}
+
+/*顶部中间的td*/
+.topCenterTd
+{
+	width: auto;
+	height: 7px;
+	background-image: url(images/in_info_table_02.gif);
+}
+
+/*顶部右侧的td*/
+.topRightTd
+{
+	width: 9px;
+	height: 7px;
+	background-image: url(images/in_info_table_03.gif);
+}
+
+/*标题左边的td*/
+.titleLeftTd
+{
+	background-image: url(images/in_info_table_04.gif);
+	width: 8px;
+	height: 100%;
+}
+
+/*容纳标题的表*/
+.titleTable
+{
+	width: 100%;
+	height: 32px;
+}
+
+/*标题左右边的td*/
+.titleImgTd
+{
+	height: 32px;
+	width: 55px;
+}
+
+/*标题中间的td*/
+.titleBgTd
+{
+	width: 100%;
+	background-image: url(images/in_line_bg.gif);
+}
+
+/*标题右边的td*/
+.titleRightTd
+{
+	width: 9px;
+	height: 100%;
+	background-image: url(images/in_info_table_06.gif);
+}
+
+/*主体区域的外部Table*/
+.mainTable
+{
+	width: 90%;
+}
+
+/*主体区域的Table*/
+.InputTable
+{
+	width: 100%;
+	font-size: 9pt;	
+	font-family: "宋体";
+	/*color: #b7e5ff;*/
+	border: solid 1px #b7e5ff;
+	background-color: #f8fcff;
+	border-collapse: collapse;	
+}
+.InputTable TH
+{
+	height: 25px;
+	color: #3580c9;
+	background-image:url(images/Login/td_bg.gif)
+}
+.InputTable TD
+{
+	background-color: White;
+	border-color: #b7e5ff;
+	border-style: solid;
+	border-width: 1px;
+	padding: 0 0 0 3px;
+	margin: 0 0 0 0;
+	text-align: left;
+	height: 25px;
+}
+.InputTable TD.InputLabel
+{
+	height: 25px;
+	font-family: "宋体";
+	text-align: center;
+	background-color: #d6eefe;	
+	border-bottom-color: #b7e5ff;
+	border-left-color: #b7e5ff;
+	border-right-color: #b7e5ff;
+	border-top-color: #b7e5ff;
+	border-style: solid;
+	border-width: 1px;
+	border-collapse: collapse;
+	color:#3580c9;
+	white-space:nowrap;
+}
+
+
+.InputTable TD.InputLabel2
+{
+	height: 25px;
+	font-family: "宋体";
+	text-align: right;
+	background-color: #d6eefe;	
+	border-bottom-color: #b7e5ff;
+	border-left-color: #b7e5ff;
+	border-right-color: #b7e5ff;
+	border-top-color: #b7e5ff;
+	border-style: solid;
+	border-width: 1px;
+	border-collapse: collapse;
+	color:#3580c9;
+	white-space:nowrap;
+}
+
+/*只读列样*/
+.InputTable TD.ReadOnlyTd
+{
+	background-color: #ededed;
+	border-color: #b7e5ff;
+	border-style: solid;
+	border-width: 1px;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	text-align: left;
+}
+
+/*无边框文本框*/
+.NoBorderInputText
+{
+	font-family: "宋体";
+	background-color: Transparent;
+	padding: 0 0 0 3px;
+	font-size: 9pt;
+	border-color: White;
+	border-style: solid;
+	border-width: 0px;	
+}
+
+/*有边框文本框*/
+.NormalInputText
+{
+	border: 1px solid #b5b5b5;
+    font-family: "宋体";
+	background-color: #f8fcff;
+	padding: 2px 0 0 3px;
+	font-size: 9pt;
+	line-height: 15px;
+	vertical-align: middle;
+}
+
+.RequiredInput
+{
+	border: 1px solid #0000ff;
+	font-family: "宋体";	
+	font-size: 9pt;
+	color: #0000FF;
+}
+
+/*只读文本框样*/
+.ReadOnlyInputText
+{
+	font-family: "宋体";
+	font-size: 9pt;
+	background-color: #ededed;
+	border-color: #b5b5b5;
+	border-style: solid;
+	border-width: 1px;
+	height: 16px;
+	padding: 2px 0 0 2px;	
+	line-height: 15px;
+	vertical-align: middle;
+}
+
+/*�检索区*/
+.queryAreaTd
+{
+	height: 32px;
+	padding: 0;
+	margin: 0;
+	background-image: url(images/td_bg.gif);
+}
+
+
+/*grid固定表头Td*/
+.gridPegHeadTd
+{
+	height: 30px;
+	background-image: url(images/td_bg.gif);
+	font-weight: bold;
+	border-color: #b7e5ff;
+}
+
+/*grid外部的Table*/
+.gridTable
+{
+	border: none 0px white;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	font-size: 9pt;
+	word-break: break-all;
+	font-family: "宋体";
+	color: #5d5c5c;
+	border-collapse: collapse;
+}
+
+/*grid外部的td*/
+.gridTd
+{
+	width: 100%;
+	vertical-align: top;
+	padding: 0;
+	margin: 0;
+}
+
+/*导航栏外部tr*/
+.navigatorOTr
+{
+	padding: 0;
+	margin: 0; /*background-image: url(images/td_bg.gif);*/
+	height: 0px;
+}
+
+/*导航栏外部td*/
+.navigatorOTd
+{
+	width: 100%;
+	vertical-align: top;
+	height: 0px;
+	padding: 0;
+	margin: 0; /*border: solid 1px #cacaca;*/
+	border-collapse: collapse;
+}
+
+/*导航栏内部Tr*/
+.navigatorInTd
+{
+	height: 0px;
+	padding: 0;
+	margin: 0;
+	background-color: #D5E5F8;
+}
+
+/*导航栏内部Table*/
+.navigator
+{
+	background-color: #ffffff;
+	height: 0px;
+	width: 100%;
+	border-collapse: separate;
+}
+
+/*底部左侧的td*/
+.bottomLeftTd
+{
+	width: 8px;
+	height: 12px;
+	background-image: url(images/in_info_table_08.gif);
+}
+
+/*底部中间的td*/
+.bottomCenterTd
+{
+	width: auto;
+	height: 12px;
+	background-image: url(images/in_info_table_09.gif);
+}
+
+/*底部右侧的td*/
+.bottomRightTd
+{
+	width: 9px;
+	height: 12px;
+	background-image: url(images/in_info_table_10.gif);
+}
+
+table.Grid
+{
+    border: 1px solid #b7e5ff;
+    border-collapse: collapse;
+    font-family: "宋体";
+    font-size: 9pt;
+    margin-left: 0px;
+}
+table.Grid td
+{
+	border-style: solid;
+	border-width: 1px;
+    border-collapse: collapse;
+    border-color: #b7e5ff;
+    font-family: "宋体";
+    font-size: 10pt;
+    padding-top: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    height: 21px;
+    white-space: nowrap;
+}
+table.Grid th
+{
+	border-style: solid;
+	border-width: 1px;
+    border-collapse: collapse;
+    border-color: #b7e5ff;
+    color:#3580c9;
+    background-image: url(Images/td_bg.gif);
+    height: 29px;
+    font-size: 10pt;
+    padding-top: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    white-space: nowrap;
+}
+
+/*gridview交替行样式*/
+.AlternatingRowStyle
+{
+background-color: #f8fcff;
+border:1px solid #D5E5F8; 
+}
+
+
+.Ddl4Time
+{
+	font-family: "宋体";
+	margin-left: 0px;
+	font-size: 9pt;
+	border-color: #489EE9;
+	border-style: solid;
+	border-width: 1px;
+}
+
+/*用于自动完成的样式*/
+.autocomplete_completionListElement
+{
+	visibility: hidden;
+	margin: 0px !important;
+	background-color: #F8FCFF;
+	color: #0066b2;
+	border: solid 1px buttonshadow;
+	cursor: hand;
+	overflow: hidden;
+	height: auto;
+	text-align: left;
+	list-style-type: none;
+	z-index:1000;	
+}
+
+.autocomplete_highlightedListItem
+{
+	background-color: #6caad9;
+	color: #FFF;
+	padding: 1px;
+	z-index:1000;	
+}
+
+.autocomplete_listItem
+{
+	background-color: #F8FCFF;
+	color: #aa7239;
+	padding: 1px;
+	z-index:1000;	
+}
+/*Add End By CK 2009-10-13*/
+
+
+/*日历控件*/
+.CalendarText
+{
+	font-family: "宋体";
+	font-size: 9pt;
+	border-color: #b5b5b5;
+	border-style: solid;
+	border-width: 1px;
+	height: 14px;
+	line-height: 14px;
+	width: 96%;
+}
+
+
+
+
+
+/*�出入确认按钮*/
+.buttonInOutConfirm
+{
+	border-style: none;
+	border-color: inherit;
+	border-width: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: hand;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url('Images/in_s_bg_tb.gif');
+	width: 62px;
+	margin-left: 0px;
+}
+
+/*�选择车辆按钮*/
+.buttonCarNo
+{
+	border-style: none;
+	border-color: inherit;
+	border-width: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: hand;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url('Images/in_s_bg_car.gif');
+	width: 90px;
+	margin-left: 0px;
+}
+
+/*�补充信息*/
+.buttonDetailInfo
+{
+	border-style: none;
+	border-color: inherit;
+	border-width: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: hand;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url('Images/in_s_bg_bc.gif');
+	width: 90px;
+	margin-left: 0px;
+}
+
+/*退卡放行*/
+.buttonCardReturn
+{
+	border-style: none;
+	border-color: inherit;
+	border-width: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: hand;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url('Images/in_s_bg_tb.gif');
+	width: 118px;
+	margin-left: 0px;
+}
+
+
+.DropDownList
+{
+	font-family: "宋体";
+	font-size: 9pt;
+	border-style: none;
+	border-width: 0;
+}
+/*clzhu 使用可输入td样式*/
+.CanInputTd
+{
+	background-color: White;
+	border-color: #b7e5ff;
+	border-style: solid;
+	border-width: 1px;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	text-align: left;
+}
+
+
+/*透明文本框样式*/
+.transText
+{
+	z-index: 0;
+	background: transparent;
+	width: 95%;
+	border-width: 0px;
+}
+/********/
+
+.button#car
+{
+	background-image: url(in_s_bg_car.gif);
+	width: 90px;
+}
+.button#bc
+{
+	background-image: url(in_s_bg_bc.gif);
+	width: 90px;
+}
+.button#del2
+{
+	background-image: url(in_s_bg_del2.gif);
+	width: 53px;
+	padding-left: 0px;
+}
+
+.DynamicNote
+{
+	font-family: "宋体";
+	text-align: center;
+	border-style: none;
+	color: #3580c9;
+}
+
+/*AutoComplete flyout */
+
+.autocomplete_completionListElement 
+{  
+	visibility : hidden;
+	margin : 0px!important;
+	background-color : inherit;
+	color : windowtext;
+	border : buttonshadow;
+	border-width : 1px;
+	border-style : solid;
+	cursor : 'default';
+	overflow : auto;
+	height : 200px;
+    text-align : left; 
+    list-style-type : none;
+}
+
+/* AutoComplete highlighted item */
+
+.autocomplete_highlightedListItem
+{
+	background-color: #ffff99;
+	color: black;
+	padding: 1px;
+}
+
+/* AutoComplete item */
+
+.autocomplete_listItem 
+{
+	background-color : window;
+	color : windowtext;
+	padding : 1px;
+}
+
+span.RequiredSign
+{
+	color:#FF0000;
+	font-weight: bold;
+        position:relative;
+        left:-15px;
+        top:2px;
+}
+/* 长字符串，显示部分，其余显示省略号，鼠标放上显示全部 */
+ .mlength
+  {
+  display: block;
+  width: 100px;
+  overflow: hidden;  
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  }
+
+
+/*分页显示总行数样式*/
+.OneRowStyle
+{
+    list-style:none;margin:0px;padding:0px;
+}
+ .OneRowStyle ul
+{
+}
+
+.OneRowStyle li
+{
+    float:left;
+    list-style:none; 
+    color: red;
+}
+
+.OneRowStyle li div
+{
+    color: rgb(119,119,119);
+    font-family:Arial;
+    font-size:14px;
+    margin-left:10px; 
+    margin-top:28px;
+}
+

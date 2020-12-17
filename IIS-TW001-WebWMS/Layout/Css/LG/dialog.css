@@ -1,0 +1,129 @@
+﻿.dialog
+{
+	border: 1px solid #14495f;
+	position: absolute;
+	font-size: 13px;
+	padding: 1px;
+	padding-bottom: 2px;
+	background-color: #d1e8fb;
+}
+.dialog .title
+{
+	height: 22px;
+	width: auto;
+	background-image: url("Images/dcis-repeat-x.png");
+	background-repeat:repeat-x;
+	background-position: 0px -32px;
+	border: 1px solid #52A5F7;
+	border-bottom: none;
+	vertical-align:middle;
+}
+.dialog .title .info
+{
+	float: left;
+	height: 20px;
+	margin-top: 2px;
+	margin-left: 5px;
+	line-height: 20px;
+	vertical-align: middle;
+	color: #3580C9;
+	font-weight: bold;
+}
+.dialog .title .ico
+{
+	float: right;
+	height: 21px;
+	width: 21px;
+	margin-top:1px;	
+	margin-right: 1px;	
+	text-align: center;
+	line-height: 20px;
+	vertical-align: middle;
+	background-image: url("Images/DCIS-no-repeat.png");
+	background-position: -64px -1px;
+	cursor: pointer;
+}
+.dialog .title .ico:hover
+{
+	background-image: url("Images/DCIS-no-repeat.png");
+	background-position: -86px -1px;
+}
+.dialog .content
+{
+	padding: 10px;
+	width: auto;
+	background-color: #FFFFFF;
+	border: 1px solid #52A5F7;
+	border-top: none;
+	background-image: url("Images/dcis-repeat-x.png");/**/
+	background-repeat: repeat-x;
+	overflow: hidden;
+	background-position:0px -950px;
+}
+.dialog .content .loading
+{
+	background-image: url("Kevin.Controls.loading.gif");
+}
+.dialog .content .inputText
+{
+	border: 1px solid #b5b5b5; /*border: 1px solid #0000ff;*/
+	font-family: "宋体";
+	font-size: 9pt;
+	background-color: #FFF;
+}
+.dialog .content .button
+{
+	border: 1px solid #b5b5b5; /*border: 1px solid #0000ff;*/
+	font-family: "宋体";
+	background: silvery;	
+	cursor:pointer;
+}
+
+.dialog .bottom
+{
+	bottom: 1px;
+	right: 1px;
+	cursor: nw-resize;
+	position: absolute;
+	background-image: url(<%=WebResource("DCIS.png")%>);
+	background-position: -32px -158px;
+	width: 10px;
+	height: 10px;
+	font-size: 0;
+}
+
+
+
+.List
+{
+	padding-top: 4px;
+	background-color: #ffffff;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-collapse: collapse;
+	border: 1px solid #1855C6;
+	cell-spacing: 0px;
+}
+.List TH
+{
+	background-image: url("Images/dcis-repeat-x.png");
+	background-position:0px -12px;
+	height: 24px;
+	border: 1px solid #c6cbc6;
+}
+.List TD
+{
+	padding: 3px;
+	line-height: 14px;
+	border: 1px solid #c6cbc6;
+}
+.List .NormalRow
+{
+	background: #FFFFFF;
+}
+.List .AlternatingRow
+{
+	background: #FFFFFF; /* 	background-color: #FFFFCC;	 	*/
+}

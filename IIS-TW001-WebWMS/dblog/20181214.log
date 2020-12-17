@@ -1,0 +1,12 @@
+
+ProcedureBase执行报错时间：2018/12/14 上午 09:38:44
+ProcedureBase Name：PROC_ASRS_AlloChangeStatus
+ProcedureBase执行报错Message：EXECUTE 后的事务计数指示 BEGIN 和 COMMIT 语句的数目不匹配。上一计数 = 0，当前计数 = 1。
+
+ProcedureBase执行报错时间：2018/12/14 上午 09:38:48
+ProcedureBase Name：PROC_ASRS_AlloChangeStatus
+ProcedureBase执行报错Message：EXECUTE 后的事务计数指示 BEGIN 和 COMMIT 语句的数目不匹配。上一计数 = 0，当前计数 = 1。
+
+ProcedureBase执行报错时间：2018/12/14 上午 09:39:06
+ProcedureBase Name：PROC_ASRS_AlloChangeStatus
+ProcedureBase执行报错Message：EXECUTE 后的事务计数指示 BEGIN 和 COMMIT 语句的数目不匹配。上一计数 = 0，当前计数 = 1。

@@ -1,0 +1,2 @@
+Class: DreamTek.ASRS.DAL.ALLOCATE, Property: cticketcode, Error: cticketcode 字段是必需的。
+Class: DreamTek.ASRS.DAL.ALLOCATE_D, Property: cstatus, Error: cstatus 字段是必需的。

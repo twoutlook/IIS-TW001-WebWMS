@@ -1,0 +1,291 @@
+﻿.CSPB
+{
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+/*菜单组TD的样式*/
+.cspbBtnCell
+{
+	cursor: hand;
+	height: 22;
+	background-color: #196DF8;
+	background-image: url(images/td_bg.gif);
+	font-family: 宋体;
+	font-size: 12px;
+	font-weight: bold;
+	font-style: normal;
+	color: #196DF8;
+	text-decoration: none;
+	text-align: Left;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2;
+}
+/*菜单组文字的样式 */
+.cspbBtn
+{
+	font-family: 宋体;
+	font-size: 12px;
+	font-weight: bold;
+	font-style: normal;
+	color: #196DF8;
+	text-decoration: none;
+	text-align: Left;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2;
+}
+/*
+	弹出菜单的样式
+*/
+.popMenu
+{
+	border: 1px;
+	border-color: #196DF8;
+	background-color: #000000;
+}
+
+/*
+	每一个菜单项的超级链接
+*/
+.cspbItm
+{
+	font-family: 宋体;
+	font-size: 12px;
+	font-weight: normal;
+	font-style: normal;
+	color: #696969;
+	text-decoration: none;
+	cursor: url(../images/sys/0005.cur);
+}
+.cspbItmSelected
+{
+	font-family: 宋体;
+	font-size: 12px;
+	font-weight: bold;
+	font-style: normal;
+	color: #4646FF;
+	text-decoration: none;
+	cursor: url(../images/sys/0005.cur);
+}
+.cspbItm:Hover
+{
+	font-family: 宋体;
+	font-size: 12px;
+	font-weight: normal;
+	font-style: normal;
+	color: #696969;
+	text-decoration: underline;
+	cursor: url(../images/sys/0005.cur);
+}
+
+/* 每一个菜单项TD的样式 */
+.cspbItmAlign
+{
+	text-align: Left;
+	padding-left: 2;
+	padding-right: 2;
+	padding-top: 2;
+}
+.cspbItmAlignl
+{
+	text-align: Left;
+	padding-left: 20;
+	padding-right: 2;
+	padding-top: 2;
+}
+/*
+	菜单样式控制
+*/
+.leftMenu
+{
+}
+.leftMenu .mainItem
+{
+	cursor: pointer;
+	height: 22;
+	background-color: #196DF8;
+	background-image: url(images/td_bg.gif);
+	font-family: 宋体;
+	font-size: 12px;
+	font-weight: bold;
+	font-style: normal;
+	color: #196DF8;
+	text-decoration: none;
+	text-align: Left;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2;
+}
+.leftMenu .btnMenuUp
+{
+	cursor: pointer;	
+	text-decoration: none;
+	text-align: center;
+	height:10px;
+	width:10px;
+	background-image:url('Images/up.gif');
+	/*background-position:-69px -80px;*/
+	background-repeat:no-repeat;
+}
+.leftMenu .btnMenuDown
+{
+	cursor: pointer;	
+	text-decoration: none;
+	text-align: center;
+	height:10px;
+	width:10px;
+	background-image:url('Images/down.gif');
+	/*background-position:-69px -95px;*/
+	background-repeat:no-repeat;
+}
+ .menuItem
+{
+	cursor: pointer;	
+	text-decoration: none;
+	text-align: Left;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2;
+	height:25px;
+	border:1px #fff solid;
+	border-bottom:1px dotted #196DF8;
+	background-color:#ffffff;
+}
+.current
+{
+	cursor: pointer;	
+	font-family: 宋体;
+	font-size: 12px;
+	font-weight: bold;
+	font-style: normal;
+	color: #196DF8;
+	text-decoration: none;
+	text-align: Left;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2;
+	vertical-align:text-bottom;
+}
+.menuItem .itemContent
+{	
+	 left:0px;
+	 bottom:0px;
+	 width:100%;
+	 height:25px;
+}
+
+ .menuItem .itemContent .itemCenter
+{
+	position:absolute;	 
+	left:16px;
+	font-family: 宋体;
+	font-size: 12px;
+	font-weight: normal;
+	font-style: normal;
+	color: #696969;
+	height:25px;
+	line-height:25px;
+	vertical-align:middle; 
+}
+ .menuItem .itemContent .itemSubMenuIco
+{
+	 position:absolute;
+	 width:10px;
+	 height:15px;
+	 right:0px;	 
+	 background-image:url('Images/pl_no_repeat.gif');
+	 background-position:-66px 0px;
+	 background-color:#196DF8;
+	 
+}
+ .menuItem .itemBottom
+{
+	 width:100%;
+	 height:1px;
+	 left:0px;	 
+	 background-color:#196DF8;
+}
+  .link
+{
+	cursor: hand;
+	font-family: 宋体;
+	font-size: 12px;
+	font-weight: normal;
+	font-style: normal;
+	color: #696969;
+	text-decoration: none;
+	text-align: Left;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2;
+	vertical-align:text-bottom;
+}
+ .hover
+{
+	border:1px #196DF8 solid;
+	border-color:#196DF8;
+	
+}
+
+.popupMenu
+{	
+	border: 1px #196DF8 solid;	
+	background-color: #ffffff;
+	width:163px;
+	
+}
+/*
+序号图标的整体控制
+*/
+.itemIndexIco
+{
+	 position:absolute;
+	 width:16px;	 
+	 height:24px;
+	 left:0px;
+	 
+}
+/*
+下面是序号图标
+*/
+.icoCss1	{background-image:url('Images/OutlookMenu/in_right_p_1.gif'); background-position:center; background-repeat:no-repeat;}
+.icoCss2	{background-image:url('Images/OutlookMenu/in_right_p_2.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss3	{background-image:url('Images/OutlookMenu/in_right_p_3.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss4	{background-image:url('Images/OutlookMenu/in_right_p_4.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss5	{background-image:url('Images/OutlookMenu/in_right_p_5.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss6	{background-image:url('Images/OutlookMenu/in_right_p_6.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss7	{background-image:url('Images/OutlookMenu/in_right_p_7.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss8	{background-image:url('Images/OutlookMenu/in_right_p_8.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss9	{background-image:url('Images/OutlookMenu/in_right_p_9.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss10	{background-image:url('Images/OutlookMenu/in_right_p_10.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss11	{background-image:url('Images/OutlookMenu/in_right_p_11.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss12	{background-image:url('Images/OutlookMenu/in_right_p_12.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss13	{background-image:url('Images/OutlookMenu/in_right_p_13.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss14	{background-image:url('Images/OutlookMenu/in_right_p_14.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss15	{background-image:url('Images/OutlookMenu/in_right_p_15.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss16	{background-image:url('Images/OutlookMenu/in_right_p_16.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss17	{background-image:url('Images/OutlookMenu/in_right_p_17.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss18	{background-image:url('Images/OutlookMenu/in_right_p_18.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss19	{background-image:url('Images/OutlookMenu/in_right_p_19.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss20	{background-image:url('Images/OutlookMenu/in_right_p_20.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss21	{background-image:url('Images/OutlookMenu/in_right_p_21.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss22	{background-image:url('Images/OutlookMenu/in_right_p_22.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss23	{background-image:url('Images/OutlookMenu/in_right_p_23.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss24	{background-image:url('Images/OutlookMenu/in_right_p_24.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss25	{background-image:url('Images/OutlookMenu/in_right_p_25.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss26	{background-image:url('Images/OutlookMenu/in_right_p_26.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss27	{background-image:url('Images/OutlookMenu/in_right_p_27.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss28	{background-image:url('Images/OutlookMenu/in_right_p_28.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss29	{background-image:url('Images/OutlookMenu/in_right_p_29.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss30	{background-image:url('Images/OutlookMenu/in_right_p_30.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss31	{background-image:url('Images/OutlookMenu/in_right_p_31.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss32	{background-image:url('Images/OutlookMenu/in_right_p_32.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss33	{background-image:url('Images/OutlookMenu/in_right_p_33.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss34	{background-image:url('Images/OutlookMenu/in_right_p_34.gif');background-position:center; background-repeat:no-repeat;}
+.icoCss35	{background-image:url('Images/OutlookMenu/in_right_p_35.gif');background-position:center; background-repeat:no-repeat;}
+ 
+
+

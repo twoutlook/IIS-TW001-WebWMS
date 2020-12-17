@@ -1,0 +1,33 @@
+
+ProcedureBase执行报错时间：2018/4/4 上午 11:05:48
+ProcedureBase Name：Proc_Deal_InasnChangeByAsn
+ProcedureBase执行报错Message：ROLLBACK TRANSACTION 请求没有对应的 BEGIN TRANSACTION。
+在将 varchar 值 '[' 转换成数据类型 int 时失败。
+Class: DreamTek.ASRS.DAL.INASN, Property: cticketcode, Error: cticketcode 字段是必需的。
+Class: DreamTek.ASRS.DAL.INASN, Property: cstatus, Error: cstatus 字段是必需的。
+
+ProcedureBase执行报错时间：2018/4/4 下午 02:46:04
+ProcedureBase Name：Proc_Update_ChangeQty
+ProcedureBase执行报错Message：在将 varchar 值 '保存失败！[' 转换成数据类型 int 时失败。
+Class: DreamTek.ASRS.DAL.INASN, Property: cticketcode, Error: cticketcode 字段是必需的。
+Class: DreamTek.ASRS.DAL.INASN, Property: cstatus, Error: cstatus 字段是必需的。
+
+ProcedureBase执行报错时间：2018/4/4 下午 02:49:02
+ProcedureBase Name：Proc_Update_ChangeQty
+ProcedureBase执行报错Message：在将 varchar 值 '保存失败！[' 转换成数据类型 int 时失败。
+
+ProcedureBase执行报错时间：2018/4/4 下午 02:49:55
+ProcedureBase Name：Proc_Update_ChangeQty
+ProcedureBase执行报错Message：在将 varchar 值 '保存失败！[' 转换成数据类型 int 时失败。
+
+ProcedureBase执行报错时间：2018/4/4 下午 02:51:43
+ProcedureBase Name：Proc_Update_ChangeQty
+ProcedureBase执行报错Message：在将 varchar 值 '保存失败！[' 转换成数据类型 int 时失败。
+
+ProcedureBase执行报错时间：2018/4/4 下午 02:57:36
+ProcedureBase Name：Proc_Update_ChangeQty
+ProcedureBase执行报错Message：在将 varchar 值 '保存失败！[' 转换成数据类型 int 时失败。
+
+ProcedureBase执行报错时间：2018/4/4 下午 02:58:35
+ProcedureBase Name：Proc_Update_ChangeQty
+ProcedureBase执行报错Message：在将 varchar 值 '保存失败！[' 转换成数据类型 int 时失败。

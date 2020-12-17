@@ -1,0 +1,4 @@
+
+ProcedureBaseNew执行报错时间：2020/3/18 12:22:56
+ProcedureBaseNew Name：Proc_ReviewStockAdjust
+ProcedureBaseNew执行报错Message：类型“System.Double”的对象无法转换为类型“System.String”。

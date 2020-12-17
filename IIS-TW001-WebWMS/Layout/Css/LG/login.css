@@ -1,0 +1,247 @@
+﻿html { filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); }
+        body
+        {
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            background-color: #ededed;
+            
+            
+        }
+        
+        .DivShowFloat
+        {
+            border: solid 1px #898989;
+            background-color: #f8fcff;
+            padding: 0px; /*1px 17px 6px 1px;*/
+            z-index: 1001;
+            position: absolute;
+            top: 197px;
+            left: 142px;
+            margin: 0px;
+            overflow: hidden;
+            border-style: none;
+            border-width: 0;
+        }
+        INPUT.deEx
+        {
+            height: 20px;
+            line-height: 20px;
+            vertical-align: middle;
+            border-right: #b5b5b5 1px solid;
+            border-top: #b5b5b5 1px solid;
+            border-left: #b5b5b5 1px solid;
+            border-bottom: #b5b5b5 1px solid;
+            background-color: #bde0fa;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #0b5195;
+            line-height: 20px;
+            vertical-align: middle;
+            padding-top: 0;
+            font-size: 15px;
+        }
+        
+    
+html
+{
+	overflow-y: scroll;
+}
+
+*
+{
+	font-family: "宋体";
+	font-size: 9pt;
+
+}
+
+A
+{
+	color: #666666;
+	font-family: "宋体";
+}
+A.hot
+{
+	color: #ff6600;
+	font-family: "宋体";
+	font-size: 14px;
+}
+A:link
+{
+	font-family: "宋体";
+	text-decoration: none;
+}
+A:visited
+{
+	font-family: "宋体";
+	text-decoration: none;
+}
+A:active
+{
+	color: #ff0000;
+	font-family: "宋体";
+	text-decoration: none;
+}
+A:hover
+{
+	color: #ff0000;
+	font-family: "宋体";
+	text-decoration: none;
+}
+
+TABLE
+{
+	font-size: 9pt;
+	word-break: break-all;
+	font-family: "宋体";
+	color: #5d5c5c;
+}
+TABLE.info
+{
+	font-size: 9pt;	
+	word-break: break-all;
+	font-family: "宋体";
+	color: #5d5c5c;
+	border-right: #cacaca 1px solid;
+	border-top: #cacaca 1px solid;
+	border-left: #cacaca 1px solid;
+	border-bottom: #cacaca 1px solid;
+	background-color: #f8fcff;
+	border-color: #cacaca;
+	border-collapse: collapse;
+}
+FONT
+{
+	font-size: 9pt;
+	font-family: "宋体";
+	color: #999999;
+}
+
+INPUT.de
+{
+	border: 1px solid #b5b5b5;
+    font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #0b5195;
+	font-weight: bold;
+	padding-top: 4px;
+	background-color: #bde0fa;
+}
+INPUT.de2
+{
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #0b5195;
+	font-weight: bold;
+	padding-top: 4px;
+	border-right: #b5b5b5 1px solid;
+	border-top: #b5b5b5 1px solid;
+	border-left: #b5b5b5 1px solid;
+	border-bottom: #b5b5b5 1px solid;
+	height: 25px;
+	width: 161px;
+	background-color: #bde0fa;
+}
+INPUT.in
+{
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #0b5195;
+	font-weight: bold;
+	padding-top: 4px;
+	border-right: #b5b5b5 1px solid;
+	border-top: #b5b5b5 1px solid;
+	border-left: #b5b5b5 1px solid;
+	border-bottom: #b5b5b5 1px solid;
+	height: 18px;
+	background-color: #edf9ff;
+}
+INPUT.noborder
+{
+	font-family: "宋体";
+	padding-top: 4px;
+	border-right: 0px solid;
+	border-top: 0px;
+	border-left: 0px;
+	border-bottom: 0px;
+	height: 18px;
+	background-color: #f8fcff;
+	font-size: 9pt;
+	width: 95%;
+}
+INPUT.disable
+{
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #0b5195;
+	font-weight: bold;
+	padding-top: 4px;
+	border-right: 0px solid;
+	border-top: 0px;
+	border-left: 0px;
+	border-bottom: 0px;
+	height: 18px;
+	background-color: #ededed;
+}
+
+.buttonclose
+{
+	border-right: 0px;
+	border-top: 0px;
+	font-size: 12px;
+	font-weight: bold;
+	border-left: 0px;
+	cursor: hand;
+	border-bottom: 0px;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/in_s_bg_close.gif);
+	width: 62px;
+}
+
+
+
+
+.HideIframe
+{
+	z-index: 1;
+	filter: progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=10);
+	visibility: hidden;
+	position: absolute;
+}
+
+/*弹出遮罩层的样式*/
+.DivShow
+{
+	border: none 0px white;
+	background: #f6f6f6;
+	padding: 0px;
+	width: expression(parentElement.scrollWidth - 2);
+	height: expression(offsetParent.offsetHeight - 2);
+	z-index: 1001;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+}
+
+
+
+
+/*导航栏内部Tr*/
+.navigatorInTd
+{
+	height: 0px;
+	padding: 0;
+	margin: 0;
+	background-color: #D5E5F8;
+}
+
+.copyright 
+{
+	background-image:url(images/bottom/in_bottom_bg.gif);
+	font-family: arial; color: #459adc; font-size: 10px; font-weight: bold
+}

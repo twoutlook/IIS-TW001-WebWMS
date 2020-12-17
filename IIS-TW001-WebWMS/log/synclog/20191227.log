@@ -1,0 +1,65 @@
+开始调用ERP接口WS_INASN_COMPLETE，请求参数是：
+调用ERP接口WS_INASN_COMPLETE出现异常,错误信息是：System.InvalidOperationException: 在 ServiceModel 客户端配置部分中，找不到引用协定“NCSServiceReference.MethodSoap”的默认终结点元素。这可能是因为未找到应用程序的配置文件，或者是因为客户端元素中找不到与此协定匹配的终结点元素。
+   在 System.ServiceModel.Description.ConfigLoader.LoadChannelBehaviors(ServiceEndpoint serviceEndpoint, String configurationName)
+   在 System.ServiceModel.ChannelFactory.ApplyConfiguration(String configurationName, Configuration configuration)
+   在 System.ServiceModel.ChannelFactory.ApplyConfiguration(String configurationName)
+   在 System.ServiceModel.ChannelFactory.InitializeEndpoint(String configurationName, EndpointAddress address)
+   在 System.ServiceModel.ChannelFactory`1..ctor(String endpointConfigurationName, EndpointAddress remoteAddress)
+   在 System.ServiceModel.ConfigurationEndpointTrait`1.CreateSimplexFactory()
+   在 System.ServiceModel.ConfigurationEndpointTrait`1.CreateChannelFactory()
+   在 System.ServiceModel.ClientBase`1.CreateChannelFactoryRef(EndpointTrait`1 endpointTrait)
+   在 System.ServiceModel.ClientBase`1.InitializeChannelFactoryRef()
+   在 System.ServiceModel.ClientBase`1..ctor()
+   在 DreamTek.ExternalService.NCSServiceReference.MethodSoapClient..ctor() 位置 d:\job\nuoqi\Web\DreamTek.ExternalService\Service References\NCSServiceReference\Reference.cs:行号 742
+   在 DreamTek.ExternalService.NCS.InAsnSync.CallMethod(INASN[] requestData, String& outmsg) 位置 d:\job\nuoqi\Web\DreamTek.ExternalService\NCS\InAsnSync.cs:行号 190
+开始调用ERP接口WS_INASN_COMPLETE，请求参数是：
+调用ERP接口WS_INASN_COMPLETE出现异常,错误信息是：System.InvalidOperationException: 在 ServiceModel 客户端配置部分中，找不到引用协定“NCSServiceReference.MethodSoap”的默认终结点元素。这可能是因为未找到应用程序的配置文件，或者是因为客户端元素中找不到与此协定匹配的终结点元素。
+   在 System.ServiceModel.Description.ConfigLoader.LoadChannelBehaviors(ServiceEndpoint serviceEndpoint, String configurationName)
+   在 System.ServiceModel.ChannelFactory.ApplyConfiguration(String configurationName, Configuration configuration)
+   在 System.ServiceModel.ChannelFactory.ApplyConfiguration(String configurationName)
+   在 System.ServiceModel.ChannelFactory.InitializeEndpoint(String configurationName, EndpointAddress address)
+   在 System.ServiceModel.ChannelFactory`1..ctor(String endpointConfigurationName, EndpointAddress remoteAddress)
+   在 System.ServiceModel.ConfigurationEndpointTrait`1.CreateSimplexFactory()
+   在 System.ServiceModel.ConfigurationEndpointTrait`1.CreateChannelFactory()
+   在 System.ServiceModel.ClientBase`1.CreateChannelFactoryRef(EndpointTrait`1 endpointTrait)
+   在 System.ServiceModel.ClientBase`1.InitializeChannelFactoryRef()
+   在 System.ServiceModel.ClientBase`1..ctor()
+   在 DreamTek.ExternalService.NCSServiceReference.MethodSoapClient..ctor() 位置 d:\job\nuoqi\Web\DreamTek.ExternalService\Service References\NCSServiceReference\Reference.cs:行号 742
+   在 DreamTek.ExternalService.NCS.InAsnSync.CallMethod(INASN[] requestData, String& outmsg) 位置 d:\job\nuoqi\Web\DreamTek.ExternalService\NCS\InAsnSync.cs:行号 190
+开始调用ERP接口WS_INASN_COMPLETE，请求参数是：
+调用ERP接口WS_INASN_COMPLETE出现异常,错误信息是：System.IO.DirectoryNotFoundException: 未能找到路径“C:\Windows\SysWOW64\inetsrv\log\synclog2019-12-27.txt”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append)
+   在 System.IO.File.AppendText(String path)
+   在 DreamTek.ExternalService.LogHelper.NewLog(String str) 位置 d:\job\nuoqi\Web\DreamTek.ExternalService\LogHelper.cs:行号 24
+   在 DreamTek.ExternalService.NCS.InAsnSync.CallMethod(INASN[] requestData, String& outmsg) 位置 d:\job\nuoqi\Web\DreamTek.ExternalService\NCS\InAsnSync.cs:行号 193
+开始调用ERP接口WS_INASN_COMPLETE，请求参数是：
+ERP接口WS_INASN_COMPLETE,返回参数是：
+开始调用ERP接口WS_INASN_COMPLETE，请求参数是：
+ERP接口WS_INASN_COMPLETE,返回参数是：
+开始调用ERP接口WS_INASN_COMPLETE，请求参数是：
+ERP接口WS_INASN_COMPLETE,返回参数是：
+开始调用ERP接口WS_INASN_COMPLETE，请求参数是：
+ERP接口WS_INASN_COMPLETE,返回参数是：
+开始调用ERP接口WS_INASN_COMPLETE，请求参数是：
+ERP接口WS_INASN_COMPLETE,返回参数是：
+开始调用ERP接口WS_INASN_COMPLETE，请求参数是：
+ERP接口WS_INASN_COMPLETE,返回参数是：
+开始调用ERP接口WS_INASN_COMPLETE，请求参数是：
+ERP接口WS_INASN_COMPLETE,返回参数是：
+开始调用ERP接口WS_INASN_COMPLETE，请求参数是：
+ERP接口WS_INASN_COMPLETE,返回参数是：
+开始调用ERP接口WS_INASN_COMPLETE，请求参数是：
+ERP接口WS_INASN_COMPLETE,返回参数是：
+开始调用ERP接口WS_INASN_COMPLETE，请求参数是：
+ERP接口WS_INASN_COMPLETE,返回参数是：
+开始调用ERP接口WS_INASN_COMPLETE，请求参数是：
+ERP接口WS_INASN_COMPLETE,返回参数是：
+开始调用ERP接口WS_INASN_COMPLETE，请求参数是：
+ERP接口WS_INASN_COMPLETE,返回参数是：
+开始调用ERP接口WS_INASN_COMPLETE，请求参数是：
+ERP接口WS_INASN_COMPLETE,返回参数是：

@@ -1,0 +1,24 @@
+CheckLoginExpire Exception:指定的架构无效。错误: 
+DBContext.msl(8092,12) : 错误 2019: 指定的成员映射无效。类型“ASRS_WebWMSModel.V_OutMixedList”中的成员“YMIXEDQTY”的类型“Edm.Double[Nullable=False,DefaultValue=]”与类型“ASRS_WebWMSModel.Store.V_OutMixedList”中的成员“YMIXEDQTY”的“SqlServer.decimal[Nullable=False,DefaultValue=,Precision=38,Scale=6]”不兼容。
+DBContext.msl(8093,12) : 错误 2019: 指定的成员映射无效。类型“ASRS_WebWMSModel.V_OutMixedList”中的成员“SUMQTY”的类型“Edm.Double[Nullable=True,DefaultValue=]”与类型“ASRS_WebWMSModel.Store.V_OutMixedList”中的成员“SUMQTY”的“SqlServer.decimal[Nullable=True,DefaultValue=,Precision=38,Scale=2]”不兼容。
+CheckLoginExpire Exception:指定的架构无效。错误: 
+DBContext.msl(8092,12) : 错误 2019: 指定的成员映射无效。类型“ASRS_WebWMSModel.V_OutMixedList”中的成员“YMIXEDQTY”的类型“Edm.Double[Nullable=False,DefaultValue=]”与类型“ASRS_WebWMSModel.Store.V_OutMixedList”中的成员“YMIXEDQTY”的“SqlServer.decimal[Nullable=False,DefaultValue=,Precision=38,Scale=6]”不兼容。
+DBContext.msl(8093,12) : 错误 2019: 指定的成员映射无效。类型“ASRS_WebWMSModel.V_OutMixedList”中的成员“SUMQTY”的类型“Edm.Double[Nullable=True,DefaultValue=]”与类型“ASRS_WebWMSModel.Store.V_OutMixedList”中的成员“SUMQTY”的“SqlServer.decimal[Nullable=True,DefaultValue=,Precision=38,Scale=2]”不兼容。
+CheckLoginExpire Exception:指定的架构无效。错误: 
+DBContext.msl(8092,12) : 错误 2019: 指定的成员映射无效。类型“ASRS_WebWMSModel.V_OutMixedList”中的成员“YMIXEDQTY”的类型“Edm.Double[Nullable=False,DefaultValue=]”与类型“ASRS_WebWMSModel.Store.V_OutMixedList”中的成员“YMIXEDQTY”的“SqlServer.decimal[Nullable=False,DefaultValue=,Precision=38,Scale=6]”不兼容。
+DBContext.msl(8093,12) : 错误 2019: 指定的成员映射无效。类型“ASRS_WebWMSModel.V_OutMixedList”中的成员“SUMQTY”的类型“Edm.Double[Nullable=True,DefaultValue=]”与类型“ASRS_WebWMSModel.Store.V_OutMixedList”中的成员“SUMQTY”的“SqlServer.decimal[Nullable=True,DefaultValue=,Precision=38,Scale=2]”不兼容。
+CheckLoginExpire Exception:指定的架构无效。错误: 
+DBContext.msl(8092,12) : 错误 2019: 指定的成员映射无效。类型“ASRS_WebWMSModel.V_OutMixedList”中的成员“YMIXEDQTY”的类型“Edm.Double[Nullable=False,DefaultValue=]”与类型“ASRS_WebWMSModel.Store.V_OutMixedList”中的成员“YMIXEDQTY”的“SqlServer.decimal[Nullable=False,DefaultValue=,Precision=38,Scale=6]”不兼容。
+DBContext.msl(8093,12) : 错误 2019: 指定的成员映射无效。类型“ASRS_WebWMSModel.V_OutMixedList”中的成员“SUMQTY”的类型“Edm.Double[Nullable=True,DefaultValue=]”与类型“ASRS_WebWMSModel.Store.V_OutMixedList”中的成员“SUMQTY”的“SqlServer.decimal[Nullable=True,DefaultValue=,Precision=38,Scale=2]”不兼容。
+CheckLoginExpire Exception:指定的架构无效。错误: 
+DBContext.msl(8092,12) : 错误 2019: 指定的成员映射无效。类型“ASRS_WebWMSModel.V_OutMixedList”中的成员“YMIXEDQTY”的类型“Edm.Double[Nullable=False,DefaultValue=]”与类型“ASRS_WebWMSModel.Store.V_OutMixedList”中的成员“YMIXEDQTY”的“SqlServer.decimal[Nullable=False,DefaultValue=,Precision=38,Scale=6]”不兼容。
+DBContext.msl(8093,12) : 错误 2019: 指定的成员映射无效。类型“ASRS_WebWMSModel.V_OutMixedList”中的成员“SUMQTY”的类型“Edm.Double[Nullable=True,DefaultValue=]”与类型“ASRS_WebWMSModel.Store.V_OutMixedList”中的成员“SUMQTY”的“SqlServer.decimal[Nullable=True,DefaultValue=,Precision=38,Scale=2]”不兼容。
+CheckLoginExpire Exception:指定的架构无效。错误: 
+DBContext.msl(8092,12) : 错误 2019: 指定的成员映射无效。类型“ASRS_WebWMSModel.V_OutMixedList”中的成员“YMIXEDQTY”的类型“Edm.Double[Nullable=False,DefaultValue=]”与类型“ASRS_WebWMSModel.Store.V_OutMixedList”中的成员“YMIXEDQTY”的“SqlServer.decimal[Nullable=False,DefaultValue=,Precision=38,Scale=6]”不兼容。
+DBContext.msl(8093,12) : 错误 2019: 指定的成员映射无效。类型“ASRS_WebWMSModel.V_OutMixedList”中的成员“SUMQTY”的类型“Edm.Double[Nullable=True,DefaultValue=]”与类型“ASRS_WebWMSModel.Store.V_OutMixedList”中的成员“SUMQTY”的“SqlServer.decimal[Nullable=True,DefaultValue=,Precision=38,Scale=2]”不兼容。
+CheckLoginExpire Exception:指定的架构无效。错误: 
+DBContext.msl(8092,12) : 错误 2019: 指定的成员映射无效。类型“ASRS_WebWMSModel.V_OutMixedList”中的成员“YMIXEDQTY”的类型“Edm.Double[Nullable=False,DefaultValue=]”与类型“ASRS_WebWMSModel.Store.V_OutMixedList”中的成员“YMIXEDQTY”的“SqlServer.decimal[Nullable=False,DefaultValue=,Precision=38,Scale=6]”不兼容。
+DBContext.msl(8093,12) : 错误 2019: 指定的成员映射无效。类型“ASRS_WebWMSModel.V_OutMixedList”中的成员“SUMQTY”的类型“Edm.Double[Nullable=True,DefaultValue=]”与类型“ASRS_WebWMSModel.Store.V_OutMixedList”中的成员“SUMQTY”的“SqlServer.decimal[Nullable=True,DefaultValue=,Precision=38,Scale=2]”不兼容。
+CheckLoginExpire Exception:指定的架构无效。错误: 
+DBContext.msl(8092,12) : 错误 2019: 指定的成员映射无效。类型“ASRS_WebWMSModel.V_OutMixedList”中的成员“YMIXEDQTY”的类型“Edm.Double[Nullable=False,DefaultValue=]”与类型“ASRS_WebWMSModel.Store.V_OutMixedList”中的成员“YMIXEDQTY”的“SqlServer.decimal[Nullable=False,DefaultValue=,Precision=38,Scale=6]”不兼容。
+DBContext.msl(8093,12) : 错误 2019: 指定的成员映射无效。类型“ASRS_WebWMSModel.V_OutMixedList”中的成员“SUMQTY”的类型“Edm.Double[Nullable=True,DefaultValue=]”与类型“ASRS_WebWMSModel.Store.V_OutMixedList”中的成员“SUMQTY”的“SqlServer.decimal[Nullable=True,DefaultValue=,Precision=38,Scale=2]”不兼容。

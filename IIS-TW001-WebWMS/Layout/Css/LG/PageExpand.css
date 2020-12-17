@@ -1,0 +1,166 @@
+﻿/*用于容纳按钮的td且居左、右对齐(不设定边框)*/
+/*左对齐*/
+.LeftTDbyButton
+{
+    text-align:left; 
+    vertical-align: top;
+    width: auto
+}
+
+/*右对齐(用于存放按钮)*/
+.RightTDbyButton
+{
+    text-align: right; 
+    width: auto
+}
+
+/*用于容纳按钮的td且居右对齐设定半边框(不包含下边框)*/
+.RightTdBtnHalfFrame
+{
+    text-align: right; 
+    vertical-align: middle;
+    border-top: solid 1px #b7e5ff; 
+    border-right: solid 1px #b7e5ff;
+    border-bottom: none 0 white;
+    border-left: none 0 white;
+}
+
+/*用于容纳按钮的td且居右对齐设定半边框(包含下边框)*/
+.RightTdBtnFrame
+{
+    text-align: right; 
+    vertical-align: middle;
+    border-top: solid 1px #b7e5ff; 
+    border-right: solid 1px #b7e5ff;
+    border-bottom: solid 1px #b7e5ff;
+    border-left: none 0 white;
+}
+
+/*用于容纳标题标签的td居左对齐*/
+/*设置边框(不包含下边框)*/
+.LeftTdbyLabelHalfFrame
+{
+    text-align: left; 
+    width: auto; 
+    padding: 2px 0 0 6px; 
+    height: 22px; 
+    border-top: solid 1px #b7e5ff;
+    border-right: none 0 white;
+    border-bottom: none 0 white;
+    border-left: solid 1px #b7e5ff;
+    white-space: nowrap;
+}
+
+/*设置边框(包含下边框)*/
+.LeftTdbyLabelFrame
+{
+    text-align: left; 
+    width: auto; 
+    padding: 2px 0 0 6px; 
+    height: 22px; 
+    border-top: solid 1px #b7e5ff;
+    border-right: none 0 white;
+    border-bottom: solid 1px #b7e5ff;
+    border-left: solid 1px #b7e5ff;
+    white-space: nowrap;
+}
+
+/*不设置边框*/
+.LeftTdbyLabel
+{
+    text-align: left; 
+    width: auto; 
+    padding: 2px 0 0 6px; 
+    height: 22px; 
+}
+
+/*用于包含iframe的TD*/
+.TDCoverIframe
+{
+    height: 1px; 
+    border: solid 1px #b7e5ff; 
+    border-collapse: collapse; 
+    margin: 0; 
+    padding: 1px;
+    width: 100%;  
+}
+
+/*紧凑的table、tr、td*/
+.CompactGrid
+{
+    height: 1px; 
+    border: none 0 white; 
+    margin: 0; 
+    padding: 0; 
+    width: 100%
+}
+
+/*隐藏td左、右某侧边框*/
+.HideLeftTd
+{
+    border-left: none 0 white;
+}
+
+.HideRightTd
+{
+    border-right: none 0 white;
+}
+
+/*需要另外添加excel导出按钮的导航栏所在行的td样式(一般为UpdatePanel中)*/
+/*左侧*/
+.UPNavLeft
+{
+    border: none 0 white; 
+    padding: 0; 
+    margin: 0;
+    width: 93%;
+}
+
+/*右侧*/
+.UPNavRight
+{
+    border: none 0 white;
+    padding: 1px 6px 0 0; 
+    margin: 0; 
+    vertical-align: middle; 
+    text-align: right; 
+    width: auto;	
+}
+
+/*Tab按钮图片 Begin*/
+/*未选中*/
+.ButtonTab
+{
+    border-width: 0;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: hand;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: #3580c9;
+	background-image: url(Images/TabImg/TabImg.gif);
+    background-repeat: no-repeat;
+    background-color: Transparent;
+	width: auto;
+}
+
+/*已选中*/
+.ButtonSelectedTab
+{
+	border-width: 0;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: hand;
+	padding-left: 22px;
+	padding-top: 2px;
+	font-family: "Arial" , "Helvetica" , "sans-serif";
+	height: 24px;
+	color: Red;
+	background-image: url(Images/TabImg/TabImg.gif);
+    background-repeat: no-repeat;
+    background-color: Transparent;
+	width: auto;
+}
+/*Tab按钮图片 End*/

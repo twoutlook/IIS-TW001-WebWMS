@@ -1,0 +1,223 @@
+﻿.part1
+{
+    float:left;
+    width:470px;
+    height:174px;
+    }
+.part1_tou
+{
+    z-index:1;
+    background:url(../../Css/LG/Images/firstpage/1.png);
+     width:100% ;
+    height:20% ;
+    }
+   
+    .part1_tou_left
+    {
+      float:left;
+      background:url(../../Css/LG/Images/firstpage/4.png);
+      width:10% ;
+      height:100% ;
+      margin-left:8px;
+      
+        }
+     .part1_tou_right
+    {
+      background:url(../../Css/LG/Images/firstpage/5.png);
+      width:20% ;
+      height:100%;
+      margin-left:40px;
+      background-repeat:no-repeat;
+      
+        }
+ .part1_zhongxian
+    {
+        text-align:center;
+        color:#bbdaf6;
+        }
+.part1_zhong
+{
+    z-index:1;
+    
+    background:url(../../Css/LG/Images/firstpage/2.png);
+      width:100% ;
+      height:40% ;
+      background-repeat:no-repeat;
+    }
+    .part1_zhong_table
+    {
+       width:100%;
+       height:100%;
+       font-size:10px;
+        }
+        .part1_zhong_datarow_icon
+        {
+            z-index:2;
+            float:left;
+           background:url(../../Css/LG/Images/firstpage/6.png);
+            height:90%;
+            width:17%;
+            text-align:center ;margin:0px;
+            background-repeat:no-repeat;
+            }
+        .part1_zhong_datarow_wenzi
+        {
+            float:left;
+            width:75%;
+            }
+        .part1_zhong_datarow_Count
+        {
+            float:left;
+            color: black;
+            text-align: center;
+            border-radius: 50px;
+            /*-webkit-border-radius: 10px;*/
+            /*-moz-border-radius: 100px;*/
+            border:2px red solid;
+            margin-left: -18px;
+            margin-top: 0px;
+            width:14px;
+            
+            }
+   
+.part1_wei
+{
+    z-index:1;
+    
+    background:url(../../Css/LG/Images/firstpage/3.png);
+     width:100% ;
+     height:20% ;
+    }
+    
+.part2
+{
+    float:left;
+    width:470px;
+    height:174px;
+    margin-left: 50px;
+    }
+    .part2_tou
+{
+    z-index:1;
+    background:url(../../Css/LG/Images/firstpage/1.png);
+     width:100% ;
+    height:20% ;
+    }
+ .part2_tou_left
+    {
+      float:left;
+      background:url(../../Css/LG/Images/firstpage/7.png);
+      width:9% ;
+      height:100% ;
+      margin-left:10px;
+     
+      
+        }
+     .part2_tou_right
+    {
+      background:url(../../Css/LG/Images/firstpage/8.png);
+      width:20% ;
+      height:100%;
+      margin-left:40px;
+      background-repeat:no-repeat;
+        }
+           .part2_zhong_datarow_icon
+        {
+            z-index:2;
+            float:left;
+           background:url(../../Css/LG/Images/firstpage/9.png);
+            height:90%;
+            width:17%;
+            text-align:center ;margin:0px;
+            background-repeat:no-repeat;
+            }
+            
+            
+.part3
+{
+    width:470px;
+    height:174px;
+    float:left;
+    margin-top:50px;
+    }
+    .part3_tou
+{
+    z-index:1;
+    background:url(../../Css/LG/Images/firstpage/1.png);
+     width:100% ;
+    height:20% ;
+    }
+ .part3_tou_left
+    {
+      float:left;
+      background:url(../../Css/LG/Images/firstpage/10.png);
+      width:9% ;
+      height:100% ;
+      margin-left:8px;
+      
+        }
+     .part3_tou_right
+    {
+      background:url(../../Css/LG/Images/firstpage/11.png);
+      width:20% ;
+      height:100%;
+      margin-left:40px;
+      background-repeat:no-repeat;
+        }
+           .part3_zhong_datarow_icon
+        {
+            z-index:2;
+            float:left;
+           background:url(../../Css/LG/Images/firstpage/12.png);
+            height:90%;
+            width:17%;
+            text-align:center ;margin:0px;
+            background-repeat:no-repeat;
+            }
+.part4
+{
+    width:470px;
+    height:174px;
+    float:left;
+    margin-left: 50px;
+    margin-top:50px;
+    
+    }
+    .part4_tou
+{
+    z-index:1;
+    background:url(../../Css/LG/Images/firstpage/1.png);
+     width:100% ;
+    height:20% ;
+    }
+ .part4_tou_left
+    {
+      float:left;
+      background:url(../../Css/LG/Images/firstpage/13.png);
+      width:9% ;
+      height:100% ;
+      margin-left:8px;
+      
+        }
+     .part4_tou_right
+    {
+      background:url(../../Css/LG/Images/firstpage/14.png);
+      width:20% ;
+      height:100%;
+      margin-left:40px;
+      background-repeat:no-repeat;
+        }
+           .part4_zhong_datarow_icon
+        {
+            z-index:2;
+            float:left;
+           background:url(../../Css/LG/Images/firstpage/15.png);
+            height:90%;
+            width:17%;
+            text-align:center ;margin:0px;
+            background-repeat:no-repeat;
+            }
+.partall
+{
+    margin:40px;
+    }

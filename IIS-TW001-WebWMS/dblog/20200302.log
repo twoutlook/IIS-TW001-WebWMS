@@ -1,0 +1,4 @@
+INSERT 语句与 CHECK 约束"CH_NOT_NEGATIVEQTY"冲突。该冲突发生于数据库"XUELONG"，表"dbo.INASN_D", column 'iquantity'。
+语句已终止。
+INSERT 语句与 CHECK 约束"CH_NOT_NEGATIVEQTY"冲突。该冲突发生于数据库"XUELONG"，表"dbo.INASN_D", column 'iquantity'。
+语句已终止。

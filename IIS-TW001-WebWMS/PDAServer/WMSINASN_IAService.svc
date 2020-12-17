@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="PermissionsServiceInterface.WMSINASN_IAService" CodeBehind="WMSINASN_IAService.svc.cs" %>

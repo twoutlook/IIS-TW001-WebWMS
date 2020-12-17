@@ -1,0 +1,70 @@
+﻿/*英文*/
+.login_center_bg {
+    background-image: url(../../images/cn/center_bg.png);
+    background-repeat: no-repeat;
+}
+
+.login_support {
+    background-image: url(../../images/us/index_info_support.png); 
+    height: 84px;
+}
+
+.login_applyAccount {
+    background-image: url(../../images/us/index_info_reg.png); 
+    width:68px;
+    height:84px;
+    display: block;
+}
+
+.login_help {
+    background-image: url(../../images/us/index_info_help.png); 
+    width:69px;
+    height:84px;
+    display: block;
+}
+
+.login_logo {
+    background-image: url(../../images/us/top_logo.gif);
+    background-repeat: no-repeat;
+}
+
+.login_gonggao {
+    background-image: url(../../images/us/index_info_news.png); 
+    background-repeat: no-repeat;
+}
+
+.first_page_inbill {
+    background-image: url(../../images/us/first_inbill.png); 
+    background-repeat: no-repeat;
+    width:72px;
+    height:18px;
+    display:inline-block;
+    margin-top: 9px;
+}
+
+.first_page_outbill {
+    background-image: url(../../images/us/first_outbill.png); 
+    background-repeat: no-repeat;
+    width:72px;
+    height:18px;
+    display:inline-block;
+    margin-top: 9px;
+}
+
+.first_page_stock {
+    background-image: url(../../images/us/first_stock.png); 
+    background-repeat: no-repeat;
+    width:72px;
+    height:18px;
+    display:inline-block;
+    margin-top: 9px;
+}
+
+.first_page_renwu {
+    background-image: url(../../images/us/first_renwu.png); 
+    background-repeat: no-repeat;
+    width:72px;
+    height:18px;
+    display:inline-block;
+    margin-top: 9px;
+}
