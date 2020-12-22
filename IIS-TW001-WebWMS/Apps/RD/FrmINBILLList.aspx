@@ -11,6 +11,9 @@
     <script type="text/javascript" src="../../Layout/Calendar/calendar.js"></script>
     <link href="../../Layout/Calendar/calendar-blue.css" rel="Stylesheet" />
     <style type="text/css">
+        .displaynone {
+            display: none;
+        }
         span.requiredSign {
             color: #FF0000;
             font-weight: bold;
@@ -67,7 +70,7 @@
                             </asp:DropDownList>
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="displaynone">
                         <td class="InputLabel" style="width: 13%;">
                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:Lang, FrmInbill_PalletCode %>"></asp:Label>：
                         </td>
@@ -141,7 +144,7 @@
 
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="displaynone">
                          <td class="InputLabel" style="width: 13%">
                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:Lang, FrmInbill_WorkType %>"></asp:Label>：
                         </td>
@@ -161,14 +164,7 @@
                                 <asp:ListItem Value="1">补单</asp:ListItem>--%>
                             </asp:DropDownList>
                         </td>
-                             <td class="InputLabel" style="width: 13%">
-                            <asp:Label ID="Label8" runat="server" Text="<%$ Resources:Lang, Commona_TimePeriod %>"></asp:Label>：<%--周期：--%>
-                        </td>
                              
-                        <td style="width: 21%">
-                            <asp:RadioButtonList ID="rbtList" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" BorderStyle="None" CssClass="DateTypeRadio">
-                            </asp:RadioButtonList>
-                        </td>
                     </tr>
                          <tr style="display: none;">
                         <td class="InputLabel" style="width: 13%">
@@ -218,7 +214,18 @@
                                 src="../../Layout/Calendar/Button.gif" onclick="return showCalendar('ctl00_ContentPlaceHolderMain_txtDINDATETo','y-mm-dd',0);" />
 
                         </td>
-                       <td colspan="2" align="center" style="text-align: right;">
+
+                        <td class="InputLabel" style="width: 13%">
+                            <asp:Label ID="Label8" runat="server" Text="<%$ Resources:Lang, Commona_TimePeriod %>"></asp:Label>：<%--周期：--%>
+                        </td>
+                             
+                        <td style="width: 21%">
+                            <asp:RadioButtonList ID="rbtList" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" BorderStyle="None" CssClass="DateTypeRadio">
+                            </asp:RadioButtonList>
+                        </td>
+                    </tr>
+                    <tr>
+                       <td colspan="6" align="center" style="text-align: right;">
                             <asp:Button ID="btnSearch" runat="server" CssClass="ButtonSearch" Text="<%$ Resources:Lang, Common_QueryBtn %>" OnClick="btnSearch_Click"></asp:Button>
                         </td>
                     </tr>
@@ -279,12 +286,12 @@
                                 <HeaderStyle HorizontalAlign="Center" />
                                 <ItemStyle HorizontalAlign="Center" />
                             </asp:TemplateField>
-                             <asp:TemplateField HeaderText="<%$ Resources:Lang, FrmINASNEMTList_MSG4 %>" InsertVisible="False"> <%--序号--%>
+                            <asp:TemplateField HeaderText="<%$ Resources:Lang, FrmINASNEMTList_MSG4 %>" InsertVisible="False"> <%--序号--%>
                                 <ItemTemplate> 
                                 <%#Container.DataItemIndex+1%> 
                                 </ItemTemplate> 
                                 <ItemStyle HorizontalAlign="Center" />
-                             </asp:TemplateField> 
+                            </asp:TemplateField> 
                             <asp:BoundField DataField="ID" DataFormatString="{0:0}" HeaderText="ID" Visible="False">
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="right" Wrap="False" />
@@ -297,15 +304,15 @@
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="CERPCODE" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmInbill_ErpCode %>">
+                            <asp:BoundField DataField="CERPCODE" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmInbill_ErpCode %>" Visible="False">
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="PALLETCODE" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmInbill_PalletCode %>">
+                            <asp:BoundField DataField="PALLETCODE" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmInbill_PalletCode %>" Visible="False">
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="worktypename1" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmInbill_WorkType %>">
+                            <asp:BoundField DataField="worktypename1" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmInbill_WorkType %>" Visible="False">
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
@@ -341,7 +348,7 @@
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" Width="80px" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="DDEFINE3" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}" HeaderText="<%$ Resources:Lang, FrmINBILLEdit_MSG8 %>"><%--抛转时间--%>
+                            <asp:BoundField DataField="DDEFINE3" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}" HeaderText="<%$ Resources:Lang, FrmINBILLEdit_MSG8 %>" Visible="False"><%--抛转时间--%>
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" Width="80px" />
                             </asp:BoundField>
@@ -355,7 +362,7 @@
                                 <ItemStyle HorizontalAlign="Center" Wrap="False" />
                             </asp:HyperLinkField>
                             <asp:HyperLinkField DataNavigateUrlFields="" DataNavigateUrlFormatString="<%$ Resources:Lang, CommonB_Exception %>" DataTextField=""
-                                DataTextFormatString="" HeaderText="<%$ Resources:Lang, CommonB_Exception %>" Text="<%$ Resources:Lang, CommonB_View %>"><%--异常,查看--%>
+                                DataTextFormatString="" HeaderText="<%$ Resources:Lang, CommonB_Exception %>" Text="<%$ Resources:Lang, CommonB_View %>" Visible="False"><%--异常,查看--%>
                                 <HeaderStyle HorizontalAlign="Center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="Center" Wrap="False" />
                             </asp:HyperLinkField>

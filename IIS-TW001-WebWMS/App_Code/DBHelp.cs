@@ -45,7 +45,15 @@ public class DBHelp
     public static DataTable ExecuteToDataTable(string StrSql)
     {
         // QUICK FIX by Mark, 2020-12-17
-        StrSql = " Exec dbo.Proc_TVShow_WareHouse '','1'";
+        //StrSql = " Exec dbo.Proc_TVShow_WareHouse '','1'";
+
+        // Note by Mark, 2020-12-22 10:20
+        // 登入時的困擾, 改錯地方了
+        // 捲捲今天提出,
+        // 一看截屏就知道 12-17做錯了。
+        // 這部份先還原。
+
+
 
         DataTable dt = new DataTable();
         using (SqlConnection Conn = new SqlConnection(connStr))

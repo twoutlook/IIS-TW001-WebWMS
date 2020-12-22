@@ -11,6 +11,10 @@
     <link href="../../Layout/Calendar/calendar-blue.css" rel="Stylesheet" />
 
     <style type="text/css">
+        .displaynone {
+            display: none;
+        }
+
         html {
             height: 100%;
         }
@@ -90,12 +94,6 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="InputLabel" style="width: 13%">
-                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:Lang, FrmOUTBILLList_BoxOrPalletCode %>"></asp:Label>： <%--箱号/栈板号：--%>
-                        </td>
-                        <td style="width: 20%">
-                            <asp:TextBox runat="server" ID="TxtSNCode" CssClass="NormalInputText" Width="95%"></asp:TextBox>
-                        </td>
                         <td class="InputLabel" style="width: 13%;">
                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:Lang, WMS_Common_Element_Cinvcode %>"></asp:Label>：
                         </td>
@@ -103,23 +101,26 @@
                             <asp:TextBox ID="txtCinvcode" runat="server"
                                 CssClass="NormalInputText" Width="95%"></asp:TextBox>
                         </td>
-
-                         <td class="InputLabel" style="width: 13%;">
+                        <td class="InputLabel" style="width: 13%;">
                             <asp:Label ID="Label6" runat="server" Text="批/序號(RANK)"></asp:Label>：
                         </td>
                         <td style="width: 20%;">
                             <asp:TextBox ID="txtRank_Final" runat="server"
                                 CssClass="NormalInputText" Width="95%" MaxLength="1"></asp:TextBox>
                         </td>
-
-                     
-                    </tr>
-                    <tr>
-                           <td class="InputLabel" style="width: 13%">
+                        <td class="InputLabel" style="width: 13%">
                             <asp:Label ID="lblCSTATUS" runat="server" Text="<%$ Resources:Lang, WMS_Common_GridView_Status %>"></asp:Label>：
                         </td>
                         <td style="width: 20%">
                             <asp:DropDownList ID="dplCSTATUS" runat="server" Width="95%"></asp:DropDownList>
+                        </td>
+                    </tr>
+                    <tr class="displaynone">
+                        <td class="InputLabel" style="width: 13%">
+                            <asp:Label ID="Label3" runat="server" Text="<%$ Resources:Lang, FrmOUTBILLList_BoxOrPalletCode %>"></asp:Label>： <%--箱号/栈板号：--%>
+                        </td>
+                        <td style="width: 20%">
+                            <asp:TextBox runat="server" ID="TxtSNCode" CssClass="NormalInputText" Width="95%"></asp:TextBox>
                         </td>
                         <td class="InputLabel" style="width: 13%">
                             <asp:Label ID="lblCCLIENT" runat="server" Text="<%$ Resources:Lang, WMS_Common_Element_ClientName %>"></asp:Label>： <%--客户名称：--%>
@@ -135,13 +136,30 @@
                         </td>
                     </tr>
                     <tr>
-                         <td class="InputLabel" style="width: 13%">
-                            <asp:Label ID="lblCERPCODE" runat="server" Text="<%$ Resources:Lang, WMS_Common_Element_ErpCode %>"></asp:Label>：
+                        <td class="InputLabel" style="width: 13%">
+                            <asp:Label ID="lblCCREATEOWNERCODE" runat="server" Text="<%$ Resources:Lang, WMS_Common_Element_CreateOwner %>"></asp:Label>：
                         </td>
-                        <td style="width: 20%;">
-                            <asp:TextBox ID="txtCERPCODE" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
+                        <td style="width: 20%">
+                            <asp:TextBox ID="txtCCREATEOWNERCODE" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
                         </td>
-                        
+                        <td class="InputLabel" style="width: 13%">
+                            <asp:Label ID="lblDCREATETIMEFromFrom" runat="server" Text="<%$ Resources:Lang, WMS_Common_Element_CreateDate %>"></asp:Label>：
+                        </td>
+                        <td style="width: 20%; white-space: nowrap;">
+                            <asp:TextBox ID="txtDCREATETIMEFrom" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
+                            <img border="0" align="absmiddle" alt="" style="cursor: pointer; position: relative; left: -30px; top: 0px"
+                                src="../../Layout/Calendar/Button.gif" onclick="return showCalendar('ctl00_ContentPlaceHolderMain_txtDCREATETIMEFrom','y-mm-dd',0);" />
+                        </td>
+                        <td class="InputLabel" style="width: 13%">
+                            <asp:Label ID="lblDCREATETIMEToTo" runat="server" Text="<%$ Resources:Lang,WMS_Common_DateTo %>"></asp:Label>：
+                        </td>
+                        <td style="width: 20%; white-space: nowrap;">
+                            <asp:TextBox ID="txtDCREATETIMETo" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
+                            <img border="0" align="absmiddle" alt="" style="cursor: pointer; position: relative; left: -30px; top: 0px"
+                                src="../../Layout/Calendar/Button.gif" onclick="return showCalendar('ctl00_ContentPlaceHolderMain_txtDCREATETIMETo','y-mm-dd',0);" />
+                        </td>
+                    </tr>
+                    <tr>
                         <td class="InputLabel" style="width: 13%">
                             <asp:Label ID="lblDINDATEFromFrom" runat="server" Text="<%$ Resources:Lang, FrmOUTBILLList_OutDate %>"></asp:Label>： <%--出库日期：--%>
                         </td>
@@ -158,7 +176,25 @@
                             <img border="0" align="absmiddle" alt="" style="cursor: pointer; position: relative; left: -30px; top: 0px"
                                 src="../../Layout/Calendar/Button.gif" onclick="return showCalendar('ctl00_ContentPlaceHolderMain_txtDINDATETo','y-mm-dd',0);" />
                         </td>
-                       
+                        <td class="InputLabel" style="width: 13%"><asp:Label ID="Label4" runat="server" Text="<%$ Resources:Lang,Commona_TimePeriod %>"></asp:Label>：</td>
+                        <td style="width: 20%; white-space: nowrap;">
+                            <asp:RadioButtonList ID="rbtList" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" BorderStyle="None" CssClass="DateTypeRadio">                          
+                            </asp:RadioButtonList>
+                        </td>
+                    </tr>
+                    <tr class="displaynone">
+                         <td class="InputLabel" style="width: 13%">
+                            <asp:Label ID="lblCERPCODE" runat="server" Text="<%$ Resources:Lang, WMS_Common_Element_ErpCode %>"></asp:Label>：
+                        </td>
+                        <td style="width: 20%;">
+                            <asp:TextBox ID="txtCERPCODE" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
+                        </td>
+                        <td class="InputLabel" style="width: 13%">
+                            <asp:Label ID="Label9" runat="server" Text="<%$ Resources:Lang, FrmBASE_PARTList_CSPECIFICATIONS%>"></asp:Label>： <%--规格--%>
+                        </td>
+                        <td style="width: 20%; white-space: nowrap;">
+                            <asp:TextBox ID="txtcspec" runat="server"  CssClass="NormalInputText" Width="95%"></asp:TextBox>                          
+                        </td>
                     </tr>
                     <tr style="display: none;">
                         <td class="InputLabel" style="width: 13%">
@@ -184,7 +220,7 @@
                                 src="../../Layout/Calendar/Button.gif" onclick="return showCalendar('ctl00_ContentPlaceHolderMain_txtDAUDITTIMETo','y-mm-dd',0);" />
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="displaynone">
                         <td class="InputLabel" style="width: 13%"><%= Resources.Lang.WMS_Common_Element_WorkType %>:<%--作业方式:--%>
                         </td>
                         <td style="width: 21%">
@@ -210,46 +246,8 @@
                             <asp:TextBox ID="txtso" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
                         </td>
                     </tr>
-                   
-                   
-                    <tr>
-                         <td class="InputLabel" style="width: 13%">
-                            <asp:Label ID="lblCCREATEOWNERCODE" runat="server" Text="<%$ Resources:Lang, WMS_Common_Element_CreateOwner %>"></asp:Label>：
-                        </td>
-                        <td style="width: 20%">
-                            <asp:TextBox ID="txtCCREATEOWNERCODE" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
-                        </td>
-                        <td class="InputLabel" style="width: 13%">
-                            <asp:Label ID="lblDCREATETIMEFromFrom" runat="server" Text="<%$ Resources:Lang, WMS_Common_Element_CreateDate %>"></asp:Label>：
-                        </td>
-                        <td style="width: 20%; white-space: nowrap;">
-                            <asp:TextBox ID="txtDCREATETIMEFrom" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
-                            <img border="0" align="absmiddle" alt="" style="cursor: pointer; position: relative; left: -30px; top: 0px"
-                                src="../../Layout/Calendar/Button.gif" onclick="return showCalendar('ctl00_ContentPlaceHolderMain_txtDCREATETIMEFrom','y-mm-dd',0);" />
-                        </td>
-                        <td class="InputLabel" style="width: 13%">
-                            <asp:Label ID="lblDCREATETIMEToTo" runat="server" Text="<%$ Resources:Lang,WMS_Common_DateTo %>"></asp:Label>：
-                        </td>
-                        <td style="width: 20%; white-space: nowrap;">
-                            <asp:TextBox ID="txtDCREATETIMETo" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
-                            <img border="0" align="absmiddle" alt="" style="cursor: pointer; position: relative; left: -30px; top: 0px"
-                                src="../../Layout/Calendar/Button.gif" onclick="return showCalendar('ctl00_ContentPlaceHolderMain_txtDCREATETIMETo','y-mm-dd',0);" />
-                        </td>
-                      
-                    </tr>
-                     <tr>
-                          <td class="InputLabel" style="width: 13%"><asp:Label ID="Label4" runat="server" Text="<%$ Resources:Lang,Commona_TimePeriod %>"></asp:Label>：</td>
-                        <td style="width: 20%; white-space: nowrap;">
-                            <asp:RadioButtonList ID="rbtList" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" BorderStyle="None" CssClass="DateTypeRadio">                          
-                            </asp:RadioButtonList>
-                        </td>
-                         <td class="InputLabel" style="width: 13%">
-                            <asp:Label ID="Label9" runat="server" Text="<%$ Resources:Lang, FrmBASE_PARTList_CSPECIFICATIONS%>"></asp:Label>： <%--规格--%>
-                        </td>
-                        <td style="width: 20%; white-space: nowrap;">
-                            <asp:TextBox ID="txtcspec" runat="server"  CssClass="NormalInputText" Width="95%"></asp:TextBox>                          
-                        </td>                     
-                         <td colspan="2" align="center" style="text-align: right;">
+                    <tr>              
+                        <td colspan="6" align="center" style="text-align: right;">
                             <asp:Button ID="btnSearch" runat="server" CssClass="ButtonSearch" Text="<%$ Resources:Lang,WMS_Common_Button_Search %>" OnClick="btnSearch_Click"></asp:Button>
                         </td>   
                     </tr>
@@ -289,12 +287,12 @@
                                 <HeaderStyle HorizontalAlign="Center" />
                                 <ItemStyle HorizontalAlign="Center" />
                             </asp:TemplateField>
-                               <asp:TemplateField HeaderText="<%$ Resources:Lang, FrmINASNEMTList_MSG4 %>" InsertVisible="False"> <%--序号--%>
+                            <asp:TemplateField HeaderText="<%$ Resources:Lang, FrmINASNEMTList_MSG4 %>" InsertVisible="False"> <%--序号--%>
                                 <ItemTemplate> 
                                 <%#Container.DataItemIndex+1%> 
                                 </ItemTemplate> 
                                 <ItemStyle HorizontalAlign="Center" />
-                             </asp:TemplateField> 
+                            </asp:TemplateField> 
                             <asp:BoundField DataField="ID" DataFormatString="{0:0}" HeaderText="ID" Visible="False">
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="right" Wrap="False" />
@@ -303,7 +301,7 @@
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="SN_CODE" DataFormatString="" HeaderText="<%$ Resources:Lang, WMS_Common_Element_PalletCode %>"><%--栈板号--%>
+                            <asp:BoundField DataField="SN_CODE" DataFormatString="" HeaderText="<%$ Resources:Lang, WMS_Common_Element_PalletCode %>" Visible="false"><%--栈板号--%>
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
@@ -315,11 +313,11 @@
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="CERPCODE" DataFormatString="" HeaderText="<%$ Resources:Lang, WMS_Common_Element_ErpCode %>">
+                            <asp:BoundField DataField="CERPCODE" DataFormatString="" HeaderText="<%$ Resources:Lang, WMS_Common_Element_ErpCode %>" Visible="false">
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="left" Wrap="False" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="CSO" DataFormatString="" HeaderText="<%$ Resources:Lang,FrmOUTASNList_SourceCode %>"><%--来源单号--%>
+                            <asp:BoundField DataField="CSO" DataFormatString="" HeaderText="<%$ Resources:Lang,FrmOUTASNList_SourceCode %>" Visible="false"><%--来源单号--%>
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="left" Wrap="False" />
                             </asp:BoundField>
@@ -343,11 +341,11 @@
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" Width="80px" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="DDEFINE3" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}" HeaderText="<%$ Resources:Lang, WMS_Common_Element_PaoZhuangShiJian %>"><%--抛转时间--%>
+                            <asp:BoundField DataField="DDEFINE3" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}" HeaderText="<%$ Resources:Lang, WMS_Common_Element_PaoZhuangShiJian %>" Visible="false"><%--抛转时间--%>
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" Width="80px" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="worktype" DataFormatString="" HeaderText="<%$ Resources:Lang, WMS_Common_Element_WorkType %>"><%--作业方式--%>
+                            <asp:BoundField DataField="worktype" DataFormatString="" HeaderText="<%$ Resources:Lang, WMS_Common_Element_WorkType %>" Visible="false"><%--作业方式--%>
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>

@@ -9,6 +9,10 @@
     <script type="text/javascript" src="../../Layout/Calendar/calendar.js"></script>
     <link href="../../Layout/Calendar/calendar-blue.css" rel="Stylesheet" />
     <style type="text/css">
+        .displaynone {
+            display: none;
+        }
+
         html {
             height: 100%;
         }
@@ -84,18 +88,14 @@
                             <img id="imgCollapse" alt="<%= Resources.Lang.WMS_Common_FoldAlt %>" src="../../Layout/Css/LG/Images/Up.gif" style="text-align: center" onclick="CollapseCondition('../../');return false;" />
                         </th>
                     </tr>
+
+                    <%-- Note by Qamar 2020-12-11 把部分元素class設displaynone並將要顯示的元素放到此處 --%>
                     <tr>
                         <td class="InputLabel" style="width: 13%">
                             <asp:Label ID="lblCCREATEOWNERCODE" runat="server" Text="<%$ Resources:Lang, WMS_Common_Element_Cticketcode %>"></asp:Label>：
                         </td>
                         <td style="width: 20%">
                             <asp:TextBox ID="txtCTICKETCODE" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
-                        </td>
-                        <td class="InputLabel" style="width: 13%">
-                            <asp:Label ID="lblCERPCODE" runat="server" Text="<%$ Resources:Lang, WMS_Common_Element_ErpCode %>"></asp:Label>：
-                        </td>
-                        <td style="width: 21%">
-                            <asp:TextBox ID="txtCERPCODE" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
                         </td>
                         <td class="InputLabel" style="width: 13%">
                             <asp:Label ID="lblITYPE" runat="server" Text="<%$ Resources:Lang, FrmOUTASNList_OutType %>"></asp:Label>：
@@ -114,23 +114,13 @@
                                 CssClass="NormalInputText" Width="95%"></asp:TextBox>
                         </td>
 
-                         <td class="InputLabel" style="width: 13%;">
+                        <td class="InputLabel" style="width: 13%;">
                             <asp:Label ID="Label4" runat="server" Text="批/序號(RANK)"></asp:Label>：
                         </td>
                         <td style="width: 20%;">
                             <asp:TextBox ID="txtRank_Final" runat="server"
                                 CssClass="NormalInputText" Width="95%" MaxLength="1"></asp:TextBox>
                         </td>
-
-                        <td class="InputLabel" style="width: 13%">
-                            <asp:Label ID="lbSO" runat="server" Text="<%$ Resources:Lang, FrmOUTASNList_SourceCode %>"></asp:Label>：
-                        </td>
-                        <td style="width: 21%">
-                            <asp:TextBox ID="txtSO" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
-                        </td>
-                      
-                    </tr>
-                    <tr>
                         <td class="InputLabel" style="width: 13%">
                             <asp:Label ID="lblCSTATUS" runat="server" Text="<%$ Resources:Lang, WMS_Common_GridView_Status %>"></asp:Label>：
                         </td>
@@ -138,6 +128,22 @@
                             <asp:DropDownList ID="txtCSTATUS" runat="server" Width="95%">
                             </asp:DropDownList>
                         </td>
+                    </tr>
+                    <tr class="displaynone">
+                        <td class="InputLabel" style="width: 13%">
+                            <asp:Label ID="lblCERPCODE" runat="server" Text="<%$ Resources:Lang, WMS_Common_Element_ErpCode %>"></asp:Label>：
+                        </td>
+                        <td style="width: 21%">
+                            <asp:TextBox ID="txtCERPCODE" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
+                        </td>
+                        <td class="InputLabel" style="width: 13%">
+                            <asp:Label ID="lbSO" runat="server" Text="<%$ Resources:Lang, FrmOUTASNList_SourceCode %>"></asp:Label>：
+                        </td>
+                        <td style="width: 21%">
+                            <asp:TextBox ID="txtSO" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr class="displaynone">
                         <td class="InputLabel" style="width: 13%; height: 23px;">
                             <asp:Label ID="Label1" runat="server" Text="<%$ Resources:Lang, FrmOUTASNList_IsMergeCode %>"></asp:Label>：
                         </td>
@@ -164,7 +170,7 @@
                         </td>
                     </tr>
                     <tr>
-                          <td class="InputLabel" style="width: 13%">
+                        <td class="InputLabel" style="width: 13%">
                             <asp:Label ID="lblCTICKETCODE" runat="server" Text="<%$ Resources:Lang, WMS_Common_Element_CreateOwner %>"></asp:Label>：
                         </td>
                         <td style="width: 21%">
@@ -186,8 +192,20 @@
                             <img border="0" align="absmiddle" alt="" style="position: relative; left: -30px; top: 0px"
                                 src="../../Layout/Calendar/Button.gif" onclick="return showCalendar('ctl00_ContentPlaceHolderMain_txtDCREATETIMETo','y-mm-dd',0);" />
                         </td>
-                       
                     </tr>
+                    <tr>
+                        <td class="InputLabel" style="width: 13%"><asp:Label ID="Label3" runat="server" Text="<%$ Resources:Lang,Commona_TimePeriod %>"></asp:Label>：</td>
+                        <td style="width: 20%; white-space: nowrap;">
+                            <asp:RadioButtonList ID="rbtList" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" BorderStyle="None" CssClass="DateTypeRadio">                          
+                            </asp:RadioButtonList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" style="text-align:right;">                     
+                            <asp:Button ID="btnSearch" runat="server" CssClass="ButtonSearch" Text="<%$ Resources:Lang,WMS_Common_Button_Search %>" OnClick="btnSearch_Click"></asp:Button>
+                        </td>
+                    </tr>
+
                     <tr style="display: none;">
                         <td class="InputLabel" style="width: 13%">
                             <asp:Label ID="lblCAUDITPERSONCODE" runat="server" Text="<%$ Resources:Lang,FrmOUTASNList_AuditUser %>"></asp:Label>：
@@ -212,12 +230,7 @@
                                 src="../../Layout/Calendar/Button.gif" onclick="return showCalendar('ctl00_ContentPlaceHolderMain_txtDAUDITDATETo','y-mm-dd',0);" />
                         </td>
                     </tr>
-                    <tr>
-                         <td class="InputLabel" style="width: 13%"><asp:Label ID="Label3" runat="server" Text="<%$ Resources:Lang,Commona_TimePeriod %>"></asp:Label>：</td>
-                        <td style="width: 20%; white-space: nowrap;">
-                            <asp:RadioButtonList ID="rbtList" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" BorderStyle="None" CssClass="DateTypeRadio">                          
-                            </asp:RadioButtonList>
-                        </td>
+                    <tr class="displaynone">
                         <td class="InputLabel" style="width: 13%"><%= Resources.Lang.WMS_Common_Element_WorkType %>：</td>
                         <td style="width: 20%; white-space: nowrap;">
                             <asp:DropDownList ID="drpWorkType" runat="server" Width="95%">
@@ -232,12 +245,6 @@
                         <td style="width: 20%; white-space: nowrap;">
                             <asp:TextBox ID="txtcspec" runat="server"  CssClass="NormalInputText" Width="95%"></asp:TextBox>                          
                         </td>   
-                      
-                    </tr>
-                    <tr>
-                          <td colspan="6" style="text-align:right;">                     
-                            <asp:Button ID="btnSearch" runat="server" CssClass="ButtonSearch" Text="<%$ Resources:Lang,WMS_Common_Button_Search %>" OnClick="btnSearch_Click"></asp:Button>
-                        </td>
                     </tr>
                 </table>
             </td>
@@ -275,12 +282,12 @@
                                 <HeaderStyle HorizontalAlign="Center" />
                                 <ItemStyle HorizontalAlign="Center" />
                             </asp:TemplateField>
-                             <asp:TemplateField HeaderText="<%$ Resources:Lang, FrmINASNEMTList_MSG4 %>" InsertVisible="False"> <%--序号--%>
+                            <asp:TemplateField HeaderText="<%$ Resources:Lang, FrmINASNEMTList_MSG4 %>" InsertVisible="False"> <%--序号--%>
                                 <ItemTemplate> 
                                 <%#Container.DataItemIndex+1%> 
                                 </ItemTemplate> 
                                 <ItemStyle HorizontalAlign="Center" />
-                             </asp:TemplateField> 
+                            </asp:TemplateField> 
                             <asp:BoundField DataField="CTICKETCODE" DataFormatString="" HeaderText="<%$ Resources:Lang, WMS_Common_Element_Cticketcode %>">
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
@@ -289,7 +296,7 @@
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="CERPCODE" DataFormatString="" HeaderText="<%$ Resources:Lang, WMS_Common_Element_ErpCode %>">
+                            <asp:BoundField DataField="CERPCODE" DataFormatString="" HeaderText="<%$ Resources:Lang, WMS_Common_Element_ErpCode %>" Visible="false">
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
@@ -297,11 +304,11 @@
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="left" Wrap="False" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="START_DATES" DataFormatString="{0:d}" HeaderText="<%$ Resources:Lang, FrmOUTASNList_StartDate %>">
+                            <asp:BoundField DataField="START_DATES" DataFormatString="{0:d}" HeaderText="<%$ Resources:Lang, FrmOUTASNList_StartDate %>" Visible="false">
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="SHIFTS" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmOUTASNList_Shift %>">
+                            <asp:BoundField DataField="SHIFTS" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmOUTASNList_Shift %>" Visible="false">
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
@@ -321,11 +328,11 @@
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="worktype" DataFormatString="" HeaderText="<%$ Resources:Lang, WMS_Common_Element_WorkType %>">
+                            <asp:BoundField DataField="worktype" DataFormatString="" HeaderText="<%$ Resources:Lang, WMS_Common_Element_WorkType %>" Visible="false">
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="IS_MERGENAME" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmOUTASNList_IsMerge %>">
+                            <asp:BoundField DataField="IS_MERGENAME" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmOUTASNList_IsMerge %>" Visible="false">
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
@@ -333,7 +340,7 @@
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="SPECIAL_OUT" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmOUTASNList_SpecialOut %>">
+                            <asp:BoundField DataField="SPECIAL_OUT" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmOUTASNList_SpecialOut %>" Visible="false">
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
@@ -349,7 +356,7 @@
                                 </ItemTemplate>
                                 <ItemStyle HorizontalAlign="Center" />
                             </asp:TemplateField>
-                            <asp:HyperLinkField DataNavigateUrlFields="" DataNavigateUrlFormatString="<%$ Resources:Lang, FrmOUTASNList_YiChang %>" DataTextField="" DataTextFormatString="" HeaderText="<%$ Resources:Lang, FrmOUTASNList_YiChang %>" Text="<%$ Resources:Lang, FrmOUTASNList_ChaKang %>">
+                            <asp:HyperLinkField DataNavigateUrlFields="" DataNavigateUrlFormatString="<%$ Resources:Lang, FrmOUTASNList_YiChang %>" DataTextField="" DataTextFormatString="" HeaderText="<%$ Resources:Lang, FrmOUTASNList_YiChang %>" Text="<%$ Resources:Lang, FrmOUTASNList_ChaKang %>"> <%--異常--%>
                                 <HeaderStyle HorizontalAlign="Center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="Center" Wrap="False" />
                             </asp:HyperLinkField>

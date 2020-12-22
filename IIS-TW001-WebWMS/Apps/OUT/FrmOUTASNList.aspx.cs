@@ -83,7 +83,14 @@ public partial class OUT_FrmOUTASNList : WMSBasePage
             AspNetPager1.CurrentPageIndex = 1;
         }
         IsFirstPage = true;
+
+        //Note by Qamar 2020-12-12
+        //如果在.aspx設定Visible為false, 會取不到數值, 因此寫在.aspx.cs這裡
+        try { grdOUTASN.Columns[18].Visible = true; }
+        catch { }
         this.GridBind();
+        try { grdOUTASN.Columns[18].Visible = false; }
+        catch { }
     }
 
     /// <summary>

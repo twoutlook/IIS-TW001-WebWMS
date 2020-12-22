@@ -83,9 +83,45 @@ public partial class Apps_BASE_FrmBaseASRSList : WMSBasePage
         Bind("");
     }
 
+    //Note by Qamar 2020-12-10
+    protected string PostUrl(string url, string taskNo)
+    {
+        try
+        {
+            //string data = "taskNo=1&palletNo=" + palletNo + "&state=13";
+            string data = "taskNo=" + taskNo;
+
+            byte[] buffer = Encoding.ASCII.GetBytes(data);
+            System.Net.HttpWebRequest WebReq = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(url);
+
+            WebReq.Timeout = 1000; //請求超過時間
+            WebReq.Method = "POST";
+            WebReq.ContentType = "application/x-www-form-urlencoded";
+            WebReq.ContentLength = buffer.Length;
+
+            using (System.IO.Stream PostData = WebReq.GetRequestStream())
+            {
+                PostData.Write(buffer, 0, buffer.Length);
+
+                System.Net.HttpWebResponse WebResp = (System.Net.HttpWebResponse)WebReq.GetResponse();
+                using (System.IO.Stream stream = WebResp.GetResponseStream())
+                {
+                    using (System.IO.StreamReader strReader = new System.IO.StreamReader(stream))
+                    {
+                        return strReader.ReadToEnd();
+                    }
+                }
+                WebResp.Close();
+            }
+        }
+        catch { }
+        return String.Empty;
+    }
+
     protected void LinkASRS_STATUS_Click(object sender, EventArgs e)
     {
-        //强制完成
+        /* 強制完成 */
+
         string wmstskid = (sender as Button).CommandArgument;
         Proc_ASRS_Operate proc = new Proc_ASRS_Operate();
         proc.P_wmstskid = !string.IsNullOrEmpty(wmstskid)? Convert.ToInt32(wmstskid):0;
@@ -100,11 +136,27 @@ public partial class Apps_BASE_FrmBaseASRSList : WMSBasePage
             this.Alert(Resources.Lang.FrmBaseASRSList_Msg02 + "：" + proc.ErrorMessage); //强制完成失败
         }
         btnSearch_Click(null, null);
+
+        /*
+        //Note by Qamar 2020-12-10
+        //測試post到webapi
+        string palletNo = "";
+        IGenericRepository<CMD_MST> conn = new GenericRepository<CMD_MST>(db);
+        var caseList = from p in conn.Get()
+                       where p.WmsTskId == int_wmstskid
+                       select p;
+        Alert(PostUrl("http://localhost:2418/WMSWCS/TaskStatesUpdate", caseList.FirstOrDefault().PACKAGENO));
+        */
+
+        //Note by Qamar 2020-12-11
+        //清除WCS命令
+        PostUrl("http://192.168.1.200/WMSWCS/api/WMSWCS/MoveTaskForceClear", wmstskid.PadLeft(5, '0'));
     }
 
     protected void btnRefresh_Click(object sender, EventArgs e)
     {
-        //取消命令
+        /* 取消命令 */
+
         string wmstskid = (sender as Button).CommandArgument;
         Proc_ASRS_Operate proc = new Proc_ASRS_Operate();
         proc.P_wmstskid = !string.IsNullOrEmpty(wmstskid) ? Convert.ToInt32(wmstskid) : 0; ;
@@ -119,6 +171,10 @@ public partial class Apps_BASE_FrmBaseASRSList : WMSBasePage
             this.Alert(Resources.Lang.FrmBaseASRSList_Msg04 + "：" + proc.ErrorMessage); //取消命令失败
         }
         btnSearch_Click(null, null);
+
+        //Note by Qamar 2020-12-11
+        //清除WCS命令
+        PostUrl("http://192.168.1.200/WMSWCS/api/WMSWCS/MoveTaskForceClear", wmstskid.PadLeft(5, '0'));
     }
 
     public IQueryable<V_AsrsList> GetQueryList()

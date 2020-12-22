@@ -10,6 +10,11 @@
     <script type="text/javascript" src="../../Layout/Calendar/calendar.js"></script>
     <link href="../../Layout/Calendar/calendar-blue.css" rel="Stylesheet" />
     <script src="../../Layout/Js/Help.js" type="text/javascript"></script>
+    <style type="text/css">
+        .displaynone {
+            display: none;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="HolderTitle" runat="Server">
     <%=Resources.Lang.Common_InbillMangement%>-&gt;<%= Resources.Lang.FrmUnionPalletList_MSG2 %>
@@ -35,6 +40,8 @@
                                 onclick="CollapseCondition('../../');return false;" />
                         </th>
                     </tr>
+
+                    <%-- Note by Qamar 2020-12-11 把部分元素class設displaynone並將要顯示的元素放到此處 --%>
                     <tr>
                         <td class="InputLabel" style="width: 13%">
                             <asp:Label ID="lblCTICKETCODE" runat="server" Text="<%$ Resources:Lang, Common_CticketCode %>"></asp:Label>：
@@ -43,20 +50,12 @@
                             <asp:TextBox ID="txtCTICKETCODE" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
                         </td>
                         <td class="InputLabel" style="width: 13%">
-                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:Lang, FrmInbill_ErpCode %>"></asp:Label>：
-                        </td>
-                        <td style="width: 20%">
-                            <asp:TextBox ID="txtERP_No" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
-                        </td>
-                        <td class="InputLabel" style="width: 13%">
                             <asp:Label ID="lblITYPE" runat="server" Text="<%$ Resources:Lang, FrmInbill_InBillTYPE %>"></asp:Label>：
                         </td>
                         <td style="width: 20%">
                             <asp:DropDownList ID="txtITYPE" runat="server" Width="95%">
                             </asp:DropDownList>
                         </td>
-                    </tr>
-                    <tr>
                         <td class="InputLabel" style="width: 13%;">
                             <asp:Label ID="Label3" runat="server" Text="<%$ Resources:Lang, FrmInbill_ReasonCode %>"></asp:Label>：
                         </td>
@@ -64,23 +63,17 @@
                             <asp:DropDownList ID="ddlREASONCODE" runat="server" Width="95%">
                             </asp:DropDownList>
                         </td>
+                    </tr>
+                    <tr>
                         <td class="InputLabel" style="width: 13%;">
                             <asp:Label ID="Label5" runat="server" Text="<%$ Resources:Lang, FrmInbill_CinvCode %>"></asp:Label>：</td>
                         <td style="width: 20%;">
                             <asp:TextBox ID="txtCinvcode" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
                         </td>
-
                         <td class="InputLabel" style="width: 13%;">
                             <asp:Label ID="Label4" runat="server" Text="批/序號(RANK)"></asp:Label>：</td>
                         <td style="width: 20%;">
                             <asp:TextBox ID="txtRank_Final" runat="server" CssClass="NormalInputText" Width="95%" MaxLength="1"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                            <td class="InputLabel" style="width: 13%">
-                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:Lang, FrmInbill_SourceTicketCode %>"></asp:Label>：</td>
-                        <td style="width: 20%">
-                            <asp:TextBox ID="txtCPO" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
                         </td>
                         <td class="InputLabel" style="width: 13%">
                             <asp:Label ID="lblCSTATUS" runat="server" Text="<%$ Resources:Lang, Common_Cstatus %>"></asp:Label>：
@@ -89,15 +82,9 @@
                             <asp:DropDownList ID="txtCSTATUS" runat="server" Width="95%">
                             </asp:DropDownList>
                         </td>
-                        <td class="InputLabel" style="width: 13%">
-                            <asp:Label ID="lblCAUDITPERSONCODE" runat="server" Text="<%$ Resources:Lang, Common_PreInasnCticketCode %>"></asp:Label>：
-                        </td>
-                        <td style="width: 21%">
-                            <asp:TextBox ID="txtINASN_IA_CTICKETCODE" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
-                        </td>
                     </tr>
                     <tr>
-                            <td class="InputLabel" style="width: 13%">
+                        <td class="InputLabel" style="width: 13%">
                             <asp:Label ID="lblCCREATEOWNERCODE" runat="server" Text="<%$ Resources:Lang, Common_CreateUser %>"></asp:Label>：
                         </td>
                         <td style="width: 20%">
@@ -117,23 +104,45 @@
                             <asp:TextBox ID="txtDCREATETIMETo" runat="server" onKeyPress="event.returnValue=false" CssClass="NormalInputText" Width="95%"></asp:TextBox>
                             <img border="0" align="absmiddle" alt="" style="cursor: pointer; position: relative; left: -30px; top: 0px"
                                 src="../../Layout/Calendar/Button.gif" onclick="return showCalendar('ctl00_ContentPlaceHolderMain_txtDCREATETIMETo','y-mm-dd',0);" />
-                        </td>
-                       
-                    </tr>
-                    <tr style="display: none">
-                        <td colspan="6">
-                            <asp:Label ID="lblID" runat="server" Text="ID："></asp:Label>
-                            <asp:TextBox ID="txtID" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
-                        </td>
+                        </td> 
                     </tr>
                     <tr>
-                         <td class="InputLabel" style="width: 13%">
+                        <td class="InputLabel" style="width: 13%">
                             <asp:Label ID="Label6" runat="server" Text="<%$ Resources:Lang, Commona_TimePeriod %>"></asp:Label>：<%--周期：--%>
                         </td>
                         <td style="width: 21%">
                             <asp:RadioButtonList ID="rbtList" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" BorderStyle="None" CssClass="DateTypeRadio">
                             </asp:RadioButtonList>
                         </td>
+                    </tr>
+
+
+                    <tr style="display: none">
+                        <td colspan="6">
+                            <asp:Label ID="lblID" runat="server" Text="ID："></asp:Label>
+                            <asp:TextBox ID="txtID" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr class="displaynone">
+                        <td class="InputLabel" style="width: 13%">
+                            <asp:Label ID="Label2" runat="server" Text="<%$ Resources:Lang, FrmInbill_ErpCode %>"></asp:Label>：
+                        </td>
+                        <td style="width: 20%">
+                            <asp:TextBox ID="txtERP_No" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
+                        </td>
+                        <td class="InputLabel" style="width: 13%">
+                            <asp:Label ID="Label1" runat="server" Text="<%$ Resources:Lang, FrmInbill_SourceTicketCode %>"></asp:Label>：</td>
+                        <td style="width: 20%">
+                            <asp:TextBox ID="txtCPO" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
+                        </td>
+                        <td class="InputLabel" style="width: 13%">
+                            <asp:Label ID="lblCAUDITPERSONCODE" runat="server" Text="<%$ Resources:Lang, Common_PreInasnCticketCode %>"></asp:Label>：
+                        </td>
+                        <td style="width: 21%">
+                            <asp:TextBox ID="txtINASN_IA_CTICKETCODE" runat="server" CssClass="NormalInputText" Width="95%"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr class="displaynone">
                         <td class="InputLabel" style="width: 13%">
                             <asp:Label ID="Label7" runat="server" Text="<%$ Resources:Lang, FrmInbill_WorkType %>"></asp:Label>：
                         </td>
@@ -247,15 +256,15 @@
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="WORKTYPE" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmInbill_WorkType %>">
+                            <asp:BoundField DataField="WORKTYPE" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmInbill_WorkType %>" Visible="false">
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="CPO" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmInbill_SourceTicketCode %>">
+                            <asp:BoundField DataField="CPO" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmInbill_SourceTicketCode %>" Visible="false">
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="CERPCODE" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmInbill_ErpCode %>">
+                            <asp:BoundField DataField="CERPCODE" DataFormatString="" HeaderText="<%$ Resources:Lang, FrmInbill_ErpCode %>" Visible="false">
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
@@ -263,7 +272,7 @@
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="center" Wrap="False" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="DDEFINE3" DataFormatString="" HeaderText="<%$ Resources:Lang, CommonB_lineReject %>"><%--判退--%>
+                            <asp:BoundField DataField="DDEFINE3" DataFormatString="" HeaderText="<%$ Resources:Lang, CommonB_lineReject %>" Visible="false"><%--判退--%>
                                 <HeaderStyle HorizontalAlign="center" Wrap="False" />
                                 <ItemStyle HorizontalAlign="left" Wrap="False" />
                             </asp:BoundField>
